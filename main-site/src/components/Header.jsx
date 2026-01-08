@@ -13,7 +13,7 @@ const Header = ({ navigation }) => {
   // Handle scroll for glassy effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      setIsScrolled(window.scrollY > 20)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
@@ -34,9 +34,7 @@ const Header = ({ navigation }) => {
     e.preventDefault()
     if (searchQuery.trim()) {
       console.log('Searching for:', searchQuery)
-      // Add your search logic here
-      // For example: navigate to search results page
-      // router.push(`/search?q=${searchQuery}`)
+      closeSearch()
     }
   }
 
@@ -46,163 +44,202 @@ const Header = ({ navigation }) => {
       setSearchOpen(false)
       setSearchClosing(false)
       setSearchQuery('')
-    }, 300) // Match animation duration
+    }, 300)
   }
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.06)] py-3 ${
-      isScrolled 
-        ? 'bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-[0_8px_40px_rgb(0,0,0,0.08)]' 
-        : 'bg-white border-b border-gray-50'
-    }`}>
-      <div className="max-w-350 mx-auto px-8 flex items-center justify-between h-16">
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b py-3 ${
+        isScrolled 
+          ? 'glass-header shadow-lg border-gray-100' 
+          : 'bg-white shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] border-gray-50'
+      }`}
+    >
+      <div className="max-w-site mx-auto px-6 md:px-12 flex items-center justify-between h-14 md:h-16">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 no-underline text-black">
+        <Link to="/" className="flex items-center gap-2 group transition-transform duration-300 hover:scale-[1.02]">
           <img 
             src={logo} 
             alt="KB Creatives" 
-            className="h-12 w-auto object-contain"
+            className="h-10 md:h-12 w-auto object-contain"
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-2 lg:gap-4">
           {navigation.map((item) => (
             <div 
               key={item.name}
-              className="relative"
+              className="relative group"
               onMouseEnter={() => item.dropdown && setActiveDropdown(item.name)}
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <Link 
                 to={item.href} 
-                className="menu-link no-underline text-black text-[24px] font-normal tracking-tight flex items-center gap-1 uppercase font-teko hover:text-brand "
+                className={`menu-link px-4 py-2 rounded-lg flex items-center gap-1.5 no-underline text-gray-900 text-[22px] font-normal tracking-wide uppercase font-teko hover:bg-gray-50/80 ${
+                  activeDropdown === item.name ? 'opacity-100 bg-gray-50/80' : ''
+                }`}
               >
                 {item.name}
                 {item.dropdown && (
-                  <svg className="w-2.5 h-2.5 ml-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                  <svg 
+                    className={`w-3 h-3 transition-transform duration-300 ${activeDropdown === item.name ? 'rotate-180' : ''}`} 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor" 
+                    strokeWidth="3"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                   </svg>
                 )}
               </Link>
               
               {/* Dropdown Menu */}
-              {item.dropdown && activeDropdown === item.name && (
-                <div className="absolute top-full left-0 mt-4 bg-white border border-gray-100 shadow-lg min-w-50 animate-fadeIn">
-                  {item.dropdown.map((subItem) => (
-                    <Link 
-                      key={subItem.name}
-                      to={subItem.href}
-                      className="block px-6 py-3 no-underline text-black text-sm font-semibold transition-all duration-300 border-b border-gray-50 last:border-b-0 hover:bg-gray-50 hover:pl-8"
-                    >
-                      {subItem.name}
-                    </Link>
-                  ))}
+              {item.dropdown && (
+                <div className={`absolute top-full left-1/2 -translate-x-1/2 pt-3 w-max min-w-[200px] pointer-events-none transition-all duration-300 ${
+                  activeDropdown === item.name ? 'opacity-100 transform translate-y-0 scale-100 pointer-events-auto' : 'opacity-0 transform -translate-y-2 scale-95'
+                }`}>
+                  <div className="bg-white/95 backdrop-blur-xl border border-gray-100 shadow-2xl rounded-2xl overflow-hidden p-2">
+                    {item.dropdown.map((subItem) => (
+                      <Link 
+                        key={subItem.name}
+                        to={subItem.href}
+                        className="flex items-center px-4 py-3 no-underline text-gray-700 text-[18px] font-normal font-teko uppercase tracking-wide rounded-xl transition-all duration-200 hover:bg-gray-50 hover:text-brand"
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
           ))}
         </nav>
 
-        {/* Search Icon */}
-        <button 
-          className="bg-transparent border-0 cursor-pointer p-2 text-black transition-colors duration-300 hover:text-brand" 
-          aria-label="Search"
-          onClick={() => setSearchOpen(true)}
-        >
-          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor">
-            <circle cx="9" cy="9" r="7" strokeWidth="2"/>
-            <path d="M14 14L18 18" strokeWidth="2" strokeLinecap="round"/>
-          </svg>
-        </button>
+        {/* Right Actions */}
+        <div className="flex items-center gap-3">
+          <button 
+            className="w-10 h-10 flex items-center justify-center bg-transparent border-0 cursor-pointer text-gray-700 transition-all duration-300 hover:bg-gray-100 rounded-full group" 
+            aria-label="Search"
+            onClick={() => setSearchOpen(true)}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="group-hover:scale-110 transition-transform">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="M21 21l-4.35-4.35" strokeLinecap="round"/>
+            </svg>
+          </button>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden bg-transparent border-0 cursor-pointer p-2"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span className="flex flex-col gap-1.25 w-6.25">
-            <span className={`block h-0.5 bg-black transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-1.75' : ''}`}></span>
-            <span className={`block h-0.5 bg-black transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
-            <span className={`block h-0.5 bg-black transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-1.75' : ''}`}></span>
-          </span>
-        </button>
+          {/* Contact Button - Google Style */}
+          <Link 
+            to="/contact" 
+            className="hidden sm:flex btn-primary !h-10 !px-6"
+          >
+            CONTACT SALES
+          </Link>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden w-10 h-10 flex items-center justify-center bg-gray-50 border-0 cursor-pointer rounded-full"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <div className="relative w-5 h-4 overflow-hidden">
+              <span className={`absolute left-0 block w-full h-0.5 bg-gray-900 transition-all duration-300 ${mobileMenuOpen ? 'top-1.5 rotate-45' : 'top-0'}`}></span>
+              <span className={`absolute left-0 top-1.5 block w-full h-0.5 bg-gray-900 transition-all duration-300 ${mobileMenuOpen ? 'opacity-0 translate-x-3' : 'opacity-1'}`}></span>
+              <span className={`absolute left-0 block w-full h-0.5 bg-gray-900 transition-all duration-300 ${mobileMenuOpen ? 'top-1.5 -rotate-45' : 'top-3'}`}></span>
+            </div>
+          </button>
+        </div>
       </div>
 
-      {/* Search Overlay */}
+      {/* Search Overlay - Google Inspired */}
       {searchOpen && (
-        <div className={`search-overlay ${searchClosing ? 'closing' : ''} fixed inset-0 bg-white z-100 flex items-center justify-center`}>
-          <div className="w-full max-w-4xl px-8">
-            {/* Close Button */}
+        <div className={`fixed inset-0 z-[100] transition-all duration-500 ${searchClosing ? 'opacity-0' : 'opacity-100'}`}>
+          <div className="absolute inset-0 bg-white/95 backdrop-blur-xl" onClick={closeSearch}></div>
+          <div className="relative w-full max-w-4xl mx-auto px-6 h-full flex flex-col justify-center">
             <button
               onClick={closeSearch}
-              className={`search-close-btn ${searchClosing ? 'closing' : ''} absolute top-8 right-8 bg-transparent border-0 cursor-pointer p-2 text-black hover:text-brand hover:rotate-90 transition-all duration-300`}
+              className="absolute top-8 right-8 w-12 h-12 flex items-center justify-center bg-gray-100 border-0 cursor-pointer rounded-full text-gray-600 hover:rotate-90 transition-all duration-500"
               aria-label="Close search"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             </button>
 
-            {/* Search Form */}
-            <form onSubmit={handleSearch} className={`search-form ${searchClosing ? 'closing' : ''} w-full`}>
-              <div className="relative">
+            <form onSubmit={handleSearch} className="w-full">
+              <div className="relative flex items-center border-b-[3px] border-brand/20 focus-within:border-brand transition-all duration-300">
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Type to search..."
-                  className="w-full text-4xl md:text-6xl font-teko font-normal border-0 border-b-2 border-gray-200 focus:border-brand outline-none py-4 bg-transparent transition-all duration-300 placeholder:text-gray-300"
+                  placeholder="Search KB Creatives..."
+                  className="w-full text-4xl md:text-6xl font-teko font-normal border-0 outline-none py-6 bg-transparent placeholder:text-gray-300"
                   autoFocus
                 />
-                <button
-                  type="submit"
-                  className="absolute right-0 top-1/2 -translate-y-1/2 bg-transparent border-0 cursor-pointer p-2 text-black hover:text-brand hover:scale-110 transition-all duration-300"
-                  aria-label="Submit search"
-                >
-                  <svg width="32" height="32" viewBox="0 0 20 20" fill="none" stroke="currentColor">
-                    <circle cx="9" cy="9" r="7" strokeWidth="2"/>
-                    <path d="M14 14L18 18" strokeWidth="2" strokeLinecap="round"/>
+                <button type="submit" className="p-4 text-brand hover:scale-110 transition-transform">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="M21 21l-4.35-4.35" strokeLinecap="round"/>
                   </svg>
                 </button>
               </div>
-              <p className={`search-helper-text ${searchClosing ? 'closing' : ''} text-gray-500 mt-4 text-sm md:text-base`}>
-                Press ESC to close or Enter to search
-              </p>
+              <div className="flex flex-wrap gap-3 mt-8 animate-fadeIn">
+                <span className="text-gray-400 font-teko text-xl mr-2">Tranding:</span>
+                {['Web Design', 'Branding', 'Portfolio', 'Shop'].map(tag => (
+                  <button key={tag} className="px-5 py-1.5 rounded-full bg-gray-100 text-gray-600 font-teko text-lg hover:bg-brand hover:text-white transition-all">
+                    {tag}
+                  </button>
+                ))}
+              </div>
             </form>
           </div>
         </div>
       )}
 
-      {/* Mobile Menu */}
-      <div className={`md:hidden bg-white border-t border-gray-100 overflow-hidden transition-all duration-300 ${mobileMenuOpen ? 'max-h-125' : 'max-h-0'}`}>
-        {navigation.map((item) => (
-          <div key={item.name} className="border-b border-gray-100">
-            <Link 
-              to={item.href}
-              className="block px-8 py-4 no-underline text-black text-lg font-medium uppercase"
-              onClick={() => !item.dropdown && setMobileMenuOpen(false)}
-            >
-              {item.name}
-            </Link>
-            {item.dropdown && (
-              <div className="bg-gray-50">
-                {item.dropdown.map((subItem) => (
-                  <Link
-                    key={subItem.name}
-                    to={subItem.href}
-                    className="block px-8 pl-12 py-3 no-underline text-gray-600 text-sm border-t border-gray-100"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {subItem.name}
-                  </Link>
-                ))}
+      {/* Mobile Menu - Full Screen Overlay */}
+      <div className={`fixed inset-0 z-40 bg-white md:hidden transition-all duration-500 ${mobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}>
+        <div className="h-full flex flex-col pt-24 px-8 pb-12 overflow-y-auto">
+          <div className="flex flex-col gap-6">
+            {navigation.map((item) => (
+              <div key={item.name} className="flex flex-col">
+                <Link 
+                  to={item.href}
+                  className="text-4xl font-teko font-bold text-gray-900 no-underline uppercase flex items-center justify-between"
+                  onClick={() => !item.dropdown && setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                  {item.dropdown && <span className="w-1.5 h-1.5 rounded-full bg-brand"></span>}
+                </Link>
+                {item.dropdown && (
+                  <div className="flex flex-col gap-4 mt-4 ml-4 border-l-2 border-gray-100 pl-6">
+                    {item.dropdown.map((subItem) => (
+                      <Link
+                        key={subItem.name}
+                        to={subItem.href}
+                        className="text-2xl font-teko text-gray-500 no-underline uppercase hover:text-brand"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
-            )}
+            ))}
           </div>
-        ))}
+          
+          <div className="mt-auto pt-10 flex flex-col gap-4">
+             <Link 
+              to="/contact" 
+              className="btn-primary !h-16 !text-xl !rounded-2xl shadow-xl shadow-brand/20"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact Sales
+            </Link>
+          </div>
+        </div>
       </div>
     </header>
   )

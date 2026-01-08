@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
-/* Import Teko Font */
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* Base Styles */
 @layer base {
@@ -12,9 +12,14 @@
   }
 
   body {
-    font-family: 'Teko', sans-serif;
+    font-family: 'Outfit', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: #333;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-teko {
+    font-family: 'Teko', sans-serif !important;
   }
 }
 
@@ -22,27 +27,42 @@
 @layer components {
   .menu-link {
     position: relative;
-    transition: color 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0.8;
   }
 
   .menu-link:hover {
     color: #F5B419;
+    opacity: 1;
   }
 
   .menu-link::after {
     content: '';
     position: absolute;
-    top: 30px;
-    bottom: 0;
-    left: 0;
+    bottom: -4px;
+    left: 50%;
     width: 0;
-    height: 2.5px;
+    height: 3px;
     background-color: #F5B419;
-    transition: width 0.3s ease-out;
+    border-radius: 99px;
+    transform: translateX(-50%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .menu-link:hover::after {
-    width: 100%;
+    width: 20px;
+  }
+
+  /* Dropdown Styles */
+  .dropdown-transition {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Glassmorphism for Header */
+  .glass-header {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
   }
 
   /* Search Overlay Animations */
@@ -175,9 +195,24 @@
     animation: marquee 13s linear infinite;
   }
 
-  /* Text Stroke / Outline Utility */
-  .text-outline {
-    -webkit-text-stroke: 1px currentColor;
-    color: transparent;
+  /* Button Design System */
+  .btn-primary {
+    @apply flex items-center justify-center gap-2.5 bg-[#F5B419] text-white px-7 h-11 font-sans text-[13px] font-extrabold uppercase rounded-full shadow-[0_8px_20px_-6px_rgba(245,180,25,0.4)] hover:shadow-[0_12px_25px_-6px_rgba(245,180,25,0.5)] hover:bg-[#E2A617] transform hover:-translate-y-0.5 active:scale-95 transition-all duration-300 cursor-pointer whitespace-nowrap tracking-wider;
+  }
+
+  .btn-secondary {
+    @apply flex items-center justify-center gap-2.5 bg-white text-black border-2 border-black/10 px-7 h-11 font-sans text-[13px] font-extrabold uppercase rounded-full hover:bg-gray-50 transform hover:-translate-y-0.5 active:scale-95 transition-all duration-300 cursor-pointer whitespace-nowrap tracking-wider shadow-sm hover:shadow-md;
+  }
+
+  .btn-icon {
+    @apply w-3.5 h-3.5 transition-transform duration-300;
+  }
+
+  .btn-primary:hover .btn-icon-right {
+    @apply translate-x-1;
+  }
+
+  .btn-secondary:hover .btn-icon-down {
+    @apply translate-y-0.5;
   }
 }

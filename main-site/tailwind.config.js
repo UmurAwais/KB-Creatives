@@ -10,8 +10,9 @@ export default {
         brand: '#F5B419',
       },
       fontFamily: {
-        'sans': ['Teko', 'sans-serif'],
+        'sans': ['Outfit', 'sans-serif'],
         'teko': ['Teko', 'sans-serif'],
+        'outfit': ['Outfit', 'sans-serif'],
       },
       maxWidth: {
         'site': '1400px',
