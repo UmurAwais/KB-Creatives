@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+/* Import Teko Font */
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Teko', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom Menu Hover Effects */
+@layer components {
+  .menu-link {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .menu-link:hover {
+    color: #F5B419;
+  }
+
+  .menu-link::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2.5px;
+    background-color: #F5B419;
+    transition: width 0.3s ease-out;
+  }
+
+  .menu-link:hover::after {
+    width: 100%;
+  }
+
+  /* Search Overlay Animations */
+  .search-overlay {
+    animation: searchOverlayFadeIn 0.3s ease-out forwards;
+  }
+
+  .search-overlay.closing {
+    animation: searchOverlayFadeOut 0.3s ease-out forwards;
+  }
+
+  .search-close-btn {
+    animation: searchSlideFromTop 0.3s ease-out forwards;
+  }
+
+  .search-close-btn.closing {
+    animation: searchSlideToTop 0.3s ease-out forwards;
+  }
+
+  .search-form {
+    animation: searchSlideFromBottom 0.4s ease-out forwards;
+  }
+
+  .search-form.closing {
+    animation: searchSlideToBottom 0.3s ease-out forwards;
+  }
+
+  .search-helper-text {
+    opacity: 0;
+    animation: searchTextFadeIn 0.3s ease-out 0.2s forwards;
+  }
+
+  .search-helper-text.closing {
+    animation: searchTextFadeOut 0.2s ease-out forwards;
+  }
+
+  /* Opening Animations */
+  @keyframes searchOverlayFadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes searchSlideFromTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes searchSlideFromBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes searchTextFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Closing Animations */
+  @keyframes searchOverlayFadeOut {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+  }
+
+  @keyframes searchSlideToTop {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+
+  @keyframes searchSlideToBottom {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+
+  @keyframes searchTextFadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /* Marquee Animation */
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 13s linear infinite;
+  }
+
+  /* Text Stroke / Outline Utility */
+  .text-outline {
+    -webkit-text-stroke: 1px currentColor;
+    color: transparent;
+  }
+}
