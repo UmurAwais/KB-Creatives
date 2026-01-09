@@ -77,7 +77,7 @@ const Header = ({ navigation }) => {
             >
               <Link 
                 to={item.href} 
-                className={`group px-4 py-2 flex items-center gap-1.5 no-underline text-gray-900 text-[22px] font-normal tracking-wide uppercase font-teko transition-all ${
+                className={`group px-4 py-2 flex items-center gap-1.5 no-underline text-gray-900 text-[22px] font-normal tracking-wide font-teko transition-all ${
                   activeDropdown === item.name ? 'text-brand' : ''
                 }`}
               >
