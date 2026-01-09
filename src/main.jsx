@@ -7,7 +7,7 @@ import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Services from './pages/Services.jsx'
 import Portfolio from './pages/Portfolio.jsx'
-import Shop from './pages/Shop.jsx'
+import Contact from './pages/Contact.jsx'
 
 // Navigation configuration
 export const navigationConfig = [
@@ -60,10 +60,7 @@ const router = createBrowserRouter([
         path: '/portfolio/graphics',
         element: <Portfolio />
       },
-      {
-        path: '/shop',
-        element: <Shop />
-      },
+
       {
         path: '/team',
         element: <Home /> // Placeholder
@@ -74,7 +71,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/contact',
-        element: <Home /> // Placeholder
+        element: <Contact />
       }
     ]
   }

@@ -38,7 +38,7 @@ const Card = ({ service, index, isVisible }) => {
   )
 }
 
-const Services = () => {
+const Services = ({ isFullPage = false }) => {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef(null)
 
@@ -122,37 +122,39 @@ const Services = () => {
   ]
 
   return (
-    <section className="bg-white pt-24 md:pt-36 overflow-hidden" ref={sectionRef}>
+    <section className={`bg-white overflow-hidden ${isFullPage ? 'pt-0' : 'pt-24 md:pt-36'}`} ref={sectionRef}>
       <div className="max-w-site mx-auto px-6 md:px-12">
         
         {/* Header Section */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 lg:mb-24">
-          <div className={`max-w-3xl transition-all duration-[1000ms] cubic-bezier(0.2, 0, 0, 1) ${
-            isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
-          }`}>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-[2px] bg-brand"></div>
-              <span className="text-brand font-outfit text-sm font-bold uppercase tracking-[0.4em]">
-                What We Do Best
-              </span>
+        {!isFullPage && (
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 lg:mb-24">
+            <div className={`max-w-3xl transition-all duration-[1000ms] cubic-bezier(0.2, 0, 0, 1) ${
+              isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
+            }`}>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-[2px] bg-brand"></div>
+                <span className="text-brand font-outfit text-sm font-bold uppercase tracking-[0.4em]">
+                  What We Do Best
+                </span>
+              </div>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-teko font-bold text-gray-900 leading-[0.85] uppercase tracking-tighter">
+                Pushing The Boundaries Of <br />
+                <span className="text-brand inline-block relative">
+                  Digital Excellence.
+                  <div className="absolute -bottom-2 left-0 w-1/3 h-2 bg-brand/20 rounded-full"></div>
+                </span>
+              </h2>
             </div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-teko font-bold text-gray-900 leading-[0.85] uppercase tracking-tighter">
-              Pushing The Boundaries Of <br />
-              <span className="text-brand inline-block relative">
-                Digital Excellence.
-                <div className="absolute -bottom-2 left-0 w-1/3 h-2 bg-brand/20 rounded-full"></div>
-              </span>
-            </h2>
+            
+            <div className={`transition-all duration-[1000ms] delay-300 cubic-bezier(0.2, 0, 0, 1) ${
+              isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+            }`}>
+              <Button variant="primary" to="/services">
+                Explore All Services
+              </Button>
+            </div>
           </div>
-          
-          <div className={`transition-all duration-[1000ms] delay-300 cubic-bezier(0.2, 0, 0, 1) ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-          }`}>
-            <Button variant="primary" to="/services">
-              Explore All Services
-            </Button>
-          </div>
-        </div>
+        )}
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import Button from './Button'
+import { searchData } from '../data/searchData'
 
 const Header = ({ navigation }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -9,6 +10,7 @@ const Header = ({ navigation }) => {
   const [searchOpen, setSearchOpen] = useState(false)
   const [searchClosing, setSearchClosing] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
+  const [searchResults, setSearchResults] = useState([])
   const [isScrolled, setIsScrolled] = useState(false)
 
   // Handle scroll for glassy effect
@@ -31,12 +33,31 @@ const Header = ({ navigation }) => {
     return () => window.removeEventListener('keydown', handleEsc)
   }, [searchOpen])
 
+  // Real-time filtering logic
+  useEffect(() => {
+    if (searchQuery.trim().length > 1) {
+      const filtered = searchData.filter(item => 
+        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.category.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+      setSearchResults(filtered)
+    } else {
+      setSearchResults([])
+    }
+  }, [searchQuery])
+
   const handleSearch = (e) => {
     e.preventDefault()
-    if (searchQuery.trim()) {
-      console.log('Searching for:', searchQuery)
+    if (searchResults.length > 0) {
+      // If there are results, navigate to the first one on Enter
+      window.location.href = searchResults[0].link
       closeSearch()
     }
+  }
+
+  const handleTagClick = (tag) => {
+    setSearchQuery(tag)
   }
 
   const closeSearch = () => {
@@ -59,7 +80,7 @@ const Header = ({ navigation }) => {
       >
       <div className="max-w-site mx-auto px-6 md:px-12 flex items-center justify-between h-14 md:h-16">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 group transition-transform duration-300 hover:scale-[1.02]">
+        <Link to="/" className="flex items-center gap-2 group transition-transform duration-300">
           <img 
             src={logo} 
             alt="KB Creatives" 
@@ -193,12 +214,56 @@ const Header = ({ navigation }) => {
             </div>
             <div className={`flex flex-wrap gap-3 mt-8 search-helper-text ${searchClosing ? 'closing' : ''}`}>
               <span className="text-gray-400 font-teko text-xl mr-2">Trending:</span>
-              {['Web Design', 'Branding', 'Portfolio', 'Shop'].map(tag => (
-                <button key={tag} className="px-5 py-1.5 rounded-full bg-gray-100 text-gray-600 font-teko text-lg hover:bg-brand hover:text-white transition-all">
+              {['Design', 'Web', 'Branding', 'SEO'].map(tag => (
+                <button 
+                  key={tag} 
+                  type="button"
+                  onClick={() => handleTagClick(tag)}
+                  className="px-5 py-1.5 rounded-full bg-gray-100 text-gray-600 font-teko text-lg hover:bg-brand hover:text-white transition-all pointer-events-auto cursor-pointer"
+                >
                   {tag}
                 </button>
               ))}
             </div>
+
+            {/* Search Results Display */}
+            {searchQuery.trim().length > 1 && (
+              <div className={`mt-12 max-h-[50vh] overflow-y-auto custom-scrollbar pr-4 ${searchClosing ? 'closing' : ''}`}>
+                {searchResults.length > 0 ? (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {searchResults.map((result, index) => (
+                      <Link
+                        key={index}
+                        to={result.link}
+                        onClick={closeSearch}
+                        className="group flex flex-col p-6 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl border border-transparent hover:border-brand/10 transition-all duration-300"
+                        style={{ animationDelay: `${index * 50}ms` }}
+                      >
+                        <div className="flex items-center justify-between mb-3">
+                          <span className="text-brand font-teko text-sm font-bold uppercase tracking-[0.2em]">
+                            {result.category}
+                          </span>
+                          <svg className="w-5 h-5 text-gray-300 group-hover:text-brand transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                          </svg>
+                        </div>
+                        <h4 className="text-2xl font-teko font-bold text-gray-900 group-hover:text-brand transition-colors uppercase">
+                          {result.title}
+                        </h4>
+                        <p className="text-gray-500 font-outfit text-sm line-clamp-2 mt-2">
+                          {result.description}
+                        </p>
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-center py-12">
+                    <p className="text-gray-400 font-teko text-3xl uppercase">No matches found for "{searchQuery}"</p>
+                    <p className="text-gray-500 font-outfit mt-2">Try different keywords or browse our services.</p>
+                  </div>
+                )}
+              </div>
+            )}
           </form>
         </div>
       </div>

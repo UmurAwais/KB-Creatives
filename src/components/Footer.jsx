@@ -3,13 +3,11 @@ import { Link } from 'react-router-dom'
 import { 
   Linkedin, 
   Instagram, 
-  Twitter, 
+  Facebook,
   Mail, 
   Phone, 
   MapPin, 
-  ArrowRight,
-  Github,
-  Youtube
+  ArrowRight
 } from 'lucide-react'
 import Button from './Button'
 import logo from '../assets/logo-white.png'
@@ -40,8 +38,16 @@ const Footer = () => {
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com', icon: <Linkedin size={18} /> },
     { name: 'Instagram', href: 'https://instagram.com', icon: <Instagram size={18} /> },
-    { name: 'Twitter', href: 'https://twitter.com', icon: <Twitter size={18} /> },
-    { name: 'Github', href: 'https://github.com', icon: <Github size={18} /> }
+    { name: 'Facebook', href: 'https://facebook.com', icon: <Facebook size={18} /> },
+    { 
+      name: 'X', 
+      href: 'https://x.com', 
+      icon: (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.49h2.039L6.486 3.24H4.298l13.311 17.403z" />
+        </svg>
+      ) 
+    }
   ]
 
   return (
