@@ -7,6 +7,9 @@ import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Services from './pages/Services.jsx'
 import Portfolio from './pages/Portfolio.jsx'
+import Blogs from './pages/Blogs.jsx'
+import BlogPost from './pages/BlogPost.jsx'
+import Team from './pages/Team.jsx'
 import Contact from './pages/Contact.jsx'
 
 // Navigation configuration
@@ -63,11 +66,15 @@ const router = createBrowserRouter([
 
       {
         path: '/team',
-        element: <Home /> // Placeholder
+        element: <Team />
       },
       {
         path: '/blogs',
-        element: <Home /> // Placeholder
+        element: <Blogs />
+      },
+      {
+        path: '/blogs/:slug',
+        element: <BlogPost />
       },
       {
         path: '/contact',
