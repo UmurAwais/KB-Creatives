@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
+import Button from './Button'
 
 const Header = ({ navigation }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -77,7 +78,7 @@ const Header = ({ navigation }) => {
             >
               <Link 
                 to={item.href} 
-                className={`group px-4 py-2 flex items-center gap-1.5 no-underline text-gray-900 text-[22px] font-normal tracking-wide font-teko transition-all ${
+                className={`group px-4 py-2 flex items-center gap-1.5 no-underline text-gray-900 text-[18px] font-medium tracking-tight font-outfit transition-all ${
                   activeDropdown === item.name ? 'text-brand' : ''
                 }`}
               >
@@ -107,7 +108,7 @@ const Header = ({ navigation }) => {
                       <Link 
                         key={subItem.name}
                         to={subItem.href}
-                        className="flex items-center px-4 py-3 no-underline text-gray-700 text-[18px] font-normal font-teko uppercase tracking-wide rounded-xl transition-all duration-200 hover:bg-gray-50 hover:text-brand"
+                        className="flex items-center px-4 py-3 no-underline text-gray-700 text-[15px] font-normal font-outfit tracking-normal rounded-xl transition-all duration-200 hover:bg-gray-50 hover:text-brand"
                       >
                         {subItem.name}
                       </Link>
@@ -133,12 +134,13 @@ const Header = ({ navigation }) => {
           </button>
 
           {/* Contact Button - Google Style */}
-          <Link 
+          <Button 
             to="/contact" 
-            className="hidden sm:flex btn-primary !h-10 !px-6"
+            className="hidden sm:flex !h-10 !px-6"
+            icon={false}
           >
-            GET STARTED
-          </Link>
+            Start Innovating
+          </Button>
 
           {/* Mobile Menu Button */}
           <button 
@@ -210,7 +212,7 @@ const Header = ({ navigation }) => {
             <div key={item.name} className="flex flex-col">
               <Link 
                 to={item.href}
-                className="text-4xl font-teko font-bold text-gray-900 no-underline uppercase flex items-center justify-between"
+                className="text-3xl font-outfit font-semibold text-gray-900 no-underline flex items-center justify-between"
                 onClick={() => !item.dropdown && setMobileMenuOpen(false)}
               >
                 {item.name}
@@ -222,7 +224,7 @@ const Header = ({ navigation }) => {
                     <Link
                       key={subItem.name}
                       to={subItem.href}
-                      className="text-2xl font-teko text-gray-500 no-underline uppercase hover:text-brand"
+                      className="text-xl font-outfit text-gray-500 no-underline hover:text-brand"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {subItem.name}
@@ -235,13 +237,14 @@ const Header = ({ navigation }) => {
         </div>
         
         <div className="mt-auto pt-10 flex flex-col gap-4">
-           <Link 
+           <Button 
             to="/contact" 
-            className="btn-primary !h-16 !text-xl !rounded-2xl shadow-xl shadow-brand/20"
+            className="!h-16 !text-xl !rounded-2xl shadow-xl shadow-brand/20"
             onClick={() => setMobileMenuOpen(false)}
+            icon={false}
           >
             Contact Sales
-          </Link>
+          </Button>
         </div>
       </div>
     </div>

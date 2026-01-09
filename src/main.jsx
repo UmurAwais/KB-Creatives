@@ -23,8 +23,7 @@ export const navigationConfig = [
     ]
   },
   { name: 'Our Team', href: '/team' },
-  { name: 'Blogs', href: '/blogs' },
-  { name: 'Contact Us', href: '/contact' }
+  { name: 'Blogs', href: '/blogs' }
 ]
 
 // Router configuration
