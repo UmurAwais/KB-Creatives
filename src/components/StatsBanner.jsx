@@ -58,7 +58,7 @@ const StatsBanner = () => {
     { value: '250+', label: 'Projects', subLabel: 'Delivered' },
     { value: '150+', label: 'Happy', subLabel: 'Clients' },
     { value: '15+', label: 'Global', subLabel: 'Awards' },
-    { value: '5+', label: 'Years of', subLabel: 'Excellence' },
+    { value: '10+', label: 'Years of', subLabel: 'Excellence' },
     { value: '99%', label: 'Client', subLabel: 'Retention' },
   ]
 
@@ -140,7 +140,7 @@ const StatsBanner = () => {
                 style={{ transitionDelay: `${700 + (index * 100)}ms` }}
               >
                 <div className="font-teko text-white text-6xl md:text-7xl font-bold mb-1 tracking-tight">
-                  <span className="inline-block transition-all duration-500 text-brand group-hover/stat:scale-110 group-hover/stat:-translate-y-2 cursor-default drop-shadow-[0_0_0px_rgba(245,180,25,0)] group-hover/stat:drop-shadow-[0_10px_15px_rgba(245,180,25,0.3)]">
+                  <span className="inline-block transition-all duration-500 text-white group-hover/stat:scale-110 group-hover/stat:-translate-y-2 cursor-default drop-shadow-[0_0_0px_rgba(245,180,25,0)] group-hover/stat:drop-shadow-[0_10px_15px_rgba(245,180,25,0.3)]">
                     {stat.value}
                   </span>
                 </div>

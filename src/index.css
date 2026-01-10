@@ -33,6 +33,10 @@
 
 /* Custom Menu Hover Effects */
 @layer components {
+  .text-outline {
+    -webkit-text-stroke: 1px currentColor;
+    color: transparent !important;
+  }
   .menu-link {
     position: relative;
     transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -199,7 +203,7 @@
   }
 
   .animate-marquee {
-    animation: marquee 13s linear infinite;
+    animation: marquee 8s linear infinite;
   }
 
   /* Button Design System - Premium Google style */
