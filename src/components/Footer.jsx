@@ -17,15 +17,17 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { name: 'UI/UX Design', href: '/services/design' },
-      { name: 'Web Development', href: '/services/web' },
-      { name: 'Digital Marketing', href: '/services/marketing' },
-      { name: 'SEO Optimization', href: '/services/seo' }
+      { name: 'UI/UX Design', href: '/portfolio/ui-ux-design' },
+      { name: 'Web Development', href: '/portfolio/web-development' },
+      { name: 'Digital Marketing', href: '/portfolio/digital-marketing' },
+      { name: 'Video Editing', href: '/portfolio/video-editing' },
+      { name: 'Shopify Development', href: '/portfolio/shopify-development' },
+      { name: 'Graphic Design', href: '/portfolio/graphic-design' },
+      { name: 'Content Monetization', href: '/portfolio/content-monetization' }
     ],
     company: [
       { name: 'About Us', href: '/about' },
       { name: 'Our Team', href: '/team' },
-      { name: 'Careers', href: '/careers' },
       { name: 'News & Blog', href: '/blogs' }
     ],
     legal: [
