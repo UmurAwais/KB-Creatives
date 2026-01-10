@@ -146,9 +146,14 @@ const Footer = () => {
                 </div>
                 <div className="pt-0.5">
                   <div className="text-white/30 font-outfit text-xs font-bold uppercase tracking-[0.2em] mb-1.5">Visit Us</div>
-                  <div className="text-white/80 font-outfit text-[15px] leading-relaxed">
-                    51/G1 College Road,<br />Chishtian Mandi
-                  </div>
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=51%2FG1+College+Road%2C+Chishtian+Mandi%2C+Pakistan" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-white/80 hover:text-white font-outfit text-[15px] transition-colors leading-relaxed block"
+                  >
+                    51/G1 College Road, Chishtian Mandi, Pakistan
+                  </a>
                 </div>
               </div>
 

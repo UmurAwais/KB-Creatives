@@ -64,7 +64,14 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <div className="text-gray-400 font-outfit text-xs font-bold uppercase tracking-widest mb-1">Visit Us</div>
-                      <div className="text-xl font-teko font-bold text-gray-900 tracking-tight">51/G1 College Road, Chishtian Mandi</div>
+                      <a 
+                        href="https://www.google.com/maps/search/?api=1&query=51%2FG1+College+Road%2C+Chishtian+Mandi%2C+Pakistan" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-xl font-teko font-bold text-gray-900 tracking-tight hover:text-brand transition-colors"
+                      >
+                        51/G1 College Road, Chishtian Mandi
+                      </a>
                     </div>
                   </div>
                 </div>
