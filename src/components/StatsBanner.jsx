@@ -75,16 +75,16 @@ const StatsBanner = () => {
 
         {/* Content Section */}
         <div className="relative z-10">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 border-b border-white/10 pb-16 mb-16">
-            <div className={`max-w-3xl transition-all duration-[800ms] delay-300 cubic-bezier(0.2, 0, 0, 1) ${
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 border-b border-white/10 pb-16 mb-16 text-center lg:text-left">
+            <div className={`max-w-3xl mx-auto lg:mx-0 transition-all duration-[800ms] delay-300 cubic-bezier(0.2, 0, 0, 1) ${
               isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
             }`}>
-              <h2 className="text-white text-4xl md:text-5xl lg:text-7xl leading-[0.9] font-teko font-bold uppercase tracking-tight cursor-default">
+              <h2 className="text-white text-4xl md:text-5xl lg:text-7xl leading-[1.1] lg:leading-[0.9] font-teko font-bold uppercase tracking-tight cursor-default">
                 <span className="inline-block transition-transform duration-500">
                   Empowering Brands With Cutting-Edge{' '}
                 </span>
                 <br />
-                <div className="relative inline-flex items-center gap-3 mt-2">
+                <div className="relative inline-flex items-center justify-center lg:justify-start gap-3 mt-2 w-full lg:w-auto">
                   <span 
                     ref={digitalRef}
                     onMouseEnter={() => setHoveredWord('digital')}
@@ -114,7 +114,7 @@ const StatsBanner = () => {
               </h2>
             </div>
 
-            <div className={`shrink-0 transition-all duration-[800ms] delay-500 cubic-bezier(0.2, 0, 0, 1) ${
+            <div className={`shrink-0 mx-auto lg:mx-0 transition-all duration-[800ms] delay-500 cubic-bezier(0.2, 0, 0, 1) ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}>
                <Button 
