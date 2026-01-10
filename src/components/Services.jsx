@@ -65,6 +65,25 @@ const Services = ({ isFullPage = false }) => {
 
   const services = [
     {
+      title: 'Digital Marketing',
+      description: 'Strategic campaigns that grow your online presence, increase engagement, and deliver measurable business results.',
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+        </svg>
+      )
+    },
+    {
+      title: 'Brand Identity',
+      description: 'Developing unique visual stories and brand strategies that help businesses stand out and connect with their audience.',
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-10.426A7.245 7.245 0 0110 3c.994 0 1.939.21 2.793.586m4.207 4.207A7.245 7.245 0 0118 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-10.426A7.245 7.245 0 0114 3c.994 0 1.939.21 2.793.586m-7.447 8.414A7.245 7.245 0 0010 18c.994 0 1.939-.21 2.793-.586m4.207-4.207A7.245 7.245 0 0018 13c0-3.517-1.009-6.799-2.753-9.571m-3.44 10.426A7.245 7.245 0 0014 18c.994 0 1.939-.21 2.793-.586" />
+        </svg>
+      )
+    },
+    {
       title: 'UI/UX Design',
       description: 'Crafting intuitive digital experiences that delight users and drive conversion through research-backed design systems.',
       icon: (
@@ -83,39 +102,20 @@ const Services = ({ isFullPage = false }) => {
       )
     },
     {
-      title: 'Brand Identity',
-      description: 'Developing unique visual stories and brand strategies that help businesses stand out and connect with their audience.',
-      icon: (
-        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-10.426A7.245 7.245 0 0110 3c.994 0 1.939.21 2.793.586m4.207 4.207A7.245 7.245 0 0118 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-10.426A7.245 7.245 0 0114 3c.994 0 1.939.21 2.793.586m-7.447 8.414A7.245 7.245 0 0010 18c.994 0 1.939-.21 2.793-.586m4.207-4.207A7.245 7.245 0 0018 13c0-3.517-1.009-6.799-2.753-9.571m-3.44 10.426A7.245 7.245 0 0014 18c.994 0 1.939-.21 2.793-.586" />
-        </svg>
-      )
-    },
-    {
-      title: 'Digital Marketing',
-      description: 'Strategic campaigns that grow your online presence, increase engagement, and deliver measurable business results.',
-      icon: (
-        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
-          <path strokeLinecap="round" strokeLinejoin="round" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
-        </svg>
-      )
-    },
-    {
-      title: 'SEO Solutions',
-      description: 'Advanced search engine optimization tailored to improve rankings and drive organic traffic to your digital platforms.',
-      icon: (
-        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg>
-      )
-    },
-    {
       title: 'Content Strategy',
       description: 'Producing high-quality content and strategies that position your brand as an authority in its industry.',
       icon: (
         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+        </svg>
+      )
+    },
+    {
+      title: 'Video Editing',
+      description: 'Professional video editing and motion graphics that bring your stories to life with cinematic quality and engaging visuals.',
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
         </svg>
       )
     }

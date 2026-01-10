@@ -29,7 +29,7 @@ const Footer = () => {
       { name: 'News & Blog', href: '/blogs' }
     ],
     legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
+      { name: 'Privacy Policy', href: '/privacy-policy' },
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Cookie Policy', href: '/cookies' }
     ]

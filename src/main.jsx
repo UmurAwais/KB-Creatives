@@ -11,6 +11,9 @@ import Blogs from './pages/Blogs.jsx'
 import BlogPost from './pages/BlogPost.jsx'
 import Team from './pages/Team.jsx'
 import Contact from './pages/Contact.jsx'
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
+import TermsOfService from './pages/TermsOfService.jsx'
+import CookiePolicy from './pages/CookiePolicy.jsx'
 
 // Navigation configuration
 export const navigationConfig = [
@@ -20,9 +23,12 @@ export const navigationConfig = [
     name: 'Portfolio', 
     href: '/portfolio',
     dropdown: [
-      { name: 'Web Design', href: '/portfolio/web-design' },
-      { name: 'Branding', href: '/portfolio/branding' },
-      { name: 'Graphics', href: '/portfolio/graphics' }
+      { name: 'UI/UX Design', href: '/portfolio/ui-ux-design' },
+      { name: 'Web Development', href: '/portfolio/web-development' },
+      { name: 'Brand Identity', href: '/portfolio/brand-identity' },
+      { name: 'Digital Marketing', href: '/portfolio/digital-marketing' },
+      { name: 'Video Editing', href: '/portfolio/video-editing' },
+      { name: 'Content Strategy', href: '/portfolio/content-strategy' }
     ]
   },
   { name: 'Our Team', href: '/team' },
@@ -52,17 +58,30 @@ const router = createBrowserRouter([
         element: <Portfolio />
       },
       {
-        path: '/portfolio/web-design',
+        path: '/portfolio/ui-ux-design',
         element: <Portfolio />
       },
       {
-        path: '/portfolio/branding',
+        path: '/portfolio/web-development',
         element: <Portfolio />
       },
       {
-        path: '/portfolio/graphics',
+        path: '/portfolio/brand-identity',
         element: <Portfolio />
       },
+      {
+        path: '/portfolio/digital-marketing',
+        element: <Portfolio />
+      },
+      {
+        path: '/portfolio/video-editing',
+        element: <Portfolio />
+      },
+      {
+        path: '/portfolio/content-strategy',
+        element: <Portfolio />
+      },
+
 
       {
         path: '/team',
@@ -79,6 +98,18 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />
+      },
+      {
+        path: '/privacy-policy',
+        element: <PrivacyPolicy />
+      },
+      {
+        path: '/terms',
+        element: <TermsOfService />
+      },
+      {
+        path: '/cookies',
+        element: <CookiePolicy />
       }
     ]
   }

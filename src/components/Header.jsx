@@ -121,17 +121,23 @@ const Header = ({ navigation }) => {
               
               {/* Dropdown Menu */}
               {item.dropdown && (
-                <div className={`absolute top-full left-1/2 -translate-x-1/2 pt-3 w-max min-w-[200px] pointer-events-none transition-all duration-300 ${
-                  activeDropdown === item.name ? 'opacity-100 transform translate-y-0 scale-100 pointer-events-auto' : 'opacity-0 transform -translate-y-2 scale-95'
+                <div className={`absolute top-full left-0 w-max min-w-[240px] z-[60] transition-all duration-300 ${
+                  activeDropdown === item.name ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
                 }`}>
-                  <div className="bg-white/95 backdrop-blur-xl border border-gray-100 shadow-2xl rounded-2xl overflow-hidden p-2">
+                  {/* Invisible bridge to prevent dropdown from closing */}
+                  <div className="h-2 w-full"></div>
+                  
+                  <div className="bg-white backdrop-blur-xl border border-gray-100 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] rounded-2xl overflow-hidden p-2">
                     {item.dropdown.map((subItem) => (
                       <Link 
                         key={subItem.name}
                         to={subItem.href}
-                        className="flex items-center px-4 py-3 no-underline text-gray-700 text-[15px] font-normal font-outfit tracking-normal rounded-xl transition-all duration-200 hover:bg-gray-50 hover:text-brand"
+                        className="flex items-center px-5 py-3.5 no-underline text-gray-700 text-[15px] font-medium font-outfit tracking-normal rounded-xl transition-all duration-200 hover:bg-gradient-to-r hover:from-brand/5 hover:to-brand/10 hover:text-brand group/item"
                       >
-                        {subItem.name}
+                        <span className="flex-1">{subItem.name}</span>
+                        <svg className="w-4 h-4 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
                       </Link>
                     ))}
                   </div>
