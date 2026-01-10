@@ -69,7 +69,7 @@ const Portfolio = () => {
       category: 'web-development',
       tags: ['Web Development', 'UI/UX Design'],
       description: 'A complete digital transformation for a leading financial services platform',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=90',
+      image: '/portfolio_fintech_1768044284286.png',
       color: 'from-blue-500/10 to-purple-500/10'
     },
     {
@@ -78,7 +78,7 @@ const Portfolio = () => {
       category: 'brand-identity',
       tags: ['Brand Identity', 'Content Strategy'],
       description: 'Redefining elegance through strategic brand positioning',
-      image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=90',
+      image: '/portfolio_luxury_brand_1768044298766.png',
       color: 'from-amber-500/10 to-orange-500/10'
     },
     {
@@ -87,7 +87,7 @@ const Portfolio = () => {
       category: 'ui-ux-design',
       tags: ['UI/UX Design', 'Web Development'],
       description: 'Crafting seamless shopping experiences that convert',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=90',
+      image: '/portfolio_ecommerce_1768044314997.png',
       color: 'from-green-500/10 to-teal-500/10'
     },
     {
@@ -96,7 +96,7 @@ const Portfolio = () => {
       category: 'digital-marketing',
       tags: ['Digital Marketing', 'Content Strategy'],
       description: 'Strategic campaigns that drove 300% engagement growth',
-      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=90',
+      image: '/portfolio_social_media_1768044330531.png',
       color: 'from-pink-500/10 to-rose-500/10'
     },
     {
@@ -105,7 +105,7 @@ const Portfolio = () => {
       category: 'ui-ux-design',
       tags: ['UI/UX Design', 'Web Development'],
       description: 'Enterprise-grade interface design for complex workflows',
-      image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=90',
+      image: '/portfolio_saas_1768044355258.png',
       color: 'from-indigo-500/10 to-blue-500/10'
     },
     {
@@ -114,7 +114,7 @@ const Portfolio = () => {
       category: 'video-editing',
       tags: ['Video Editing', 'Content Strategy'],
       description: 'Award-winning video content with stunning visuals and storytelling',
-      image: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&q=90',
+      image: '/portfolio_video_1768044374265.png',
       color: 'from-violet-500/10 to-purple-500/10'
     },
     {
@@ -123,7 +123,7 @@ const Portfolio = () => {
       category: 'web-development',
       tags: ['Web Development', 'UI/UX Design'],
       description: 'Award-winning mobile experience with 4.9★ rating',
-      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=90',
+      image: '/portfolio_mobile_app_1768044388985.png',
       color: 'from-cyan-500/10 to-blue-500/10'
     },
     {
@@ -132,7 +132,7 @@ const Portfolio = () => {
       category: 'content-strategy',
       tags: ['Content Strategy', 'Digital Marketing'],
       description: 'Building thought leadership through strategic storytelling',
-      image: 'https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=800&q=90',
+      image: '/portfolio_content_marketing_176804429810.png',
       color: 'from-emerald-500/10 to-green-500/10'
     },
     {
@@ -141,7 +141,7 @@ const Portfolio = () => {
       category: 'brand-identity',
       tags: ['Brand Identity', 'Digital Marketing'],
       description: 'Complete visual identity overhaul for global enterprise',
-      image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=90',
+      image: '/portfolio_corporate_rebrand_1768044460369.png',
       color: 'from-red-500/10 to-orange-500/10'
     },
     {
@@ -150,7 +150,7 @@ const Portfolio = () => {
       category: 'shopify-development',
       tags: ['Shopify Development', 'Web Development'],
       description: 'Custom Shopify store with 300% increase in conversions',
-      image: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&q=90',
+      image: '/portfolio_shopify_1768044475361.png',
       color: 'from-green-500/10 to-emerald-500/10'
     },
     {
@@ -159,7 +159,7 @@ const Portfolio = () => {
       category: 'graphic-design',
       tags: ['Graphic Design', 'Brand Identity'],
       description: 'Complete design system from logo to marketing collateral',
-      image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=90',
+      image: '/portfolio_graphic_design_1768044491226.png',
       color: 'from-purple-500/10 to-pink-500/10'
     },
     {
@@ -168,7 +168,7 @@ const Portfolio = () => {
       category: 'content-monetization',
       tags: ['Content Monetization', 'Digital Marketing'],
       description: 'Monetization strategy generating $50K+ monthly revenue',
-      image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=90',
+      image: '/portfolio_monetization_1768044507535.png',
       color: 'from-yellow-500/10 to-orange-500/10'
     }
   ]

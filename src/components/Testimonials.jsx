@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from 'react'
 
 const testimonials = [
   {
-    name: 'Sarah Johnson',
+    name: 'Simon Johnson',
     role: 'CEO, TechFlow',
     content: "KB Creatives transformed our digital presence. Their strategic approach to UI/UX didn't just make our app look better; it significantly improved our user engagement and conversion rates.",
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&q=80'
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&q=80'
   },
   {
     name: 'Michael Chen',
@@ -14,10 +14,10 @@ const testimonials = [
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&q=80'
   },
   {
-    name: 'Elena Rodriguez',
+    name: 'Everett Rodriguez',
     role: 'Marketing Director, Lumina',
     content: "Working with KB Creatives was the best decision for our rebranding. They captured our brand essence effortlessly and created a visual identity that truly stands out in the market.",
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&q=80'
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&q=80'
   }
 ]
 

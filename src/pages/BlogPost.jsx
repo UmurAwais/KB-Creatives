@@ -18,7 +18,7 @@ const BlogPost = () => {
     date: "Jan 08, 2026",
     author: "Alex Rivers",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200&q=80",
+    image: "/blog_design_trends_1768044637855.png",
     content: `
       <p class="text-xl text-gray-600 mb-8 leading-relaxed font-outfit">
         The digital landscape is shifting faster than ever. As we enter 2026, the intersection of specialized AI, hyper-personalization, and tactile design is redefining how users interact with brands. In this deep dive, we explore the top 10 trends that are dominating the high-end agency world.
@@ -42,7 +42,7 @@ const BlogPost = () => {
       </p>
 
       <div class="my-12 rounded-[3rem] overflow-hidden shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1000&q=80" alt="Modern Tech Office" class="w-full h-auto" />
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1000&q=80" alt="Modern Tech Office" class="w-full h-auto" />
       </div>
 
       <h2 class="text-4xl font-teko font-bold text-gray-900 uppercase tracking-tight mb-6 mt-12">03. Sustainable Tech Stacks</h2>
@@ -88,7 +88,7 @@ const BlogPost = () => {
               <div className="flex flex-wrap items-center gap-8 py-8 border-y border-gray-100">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-400 overflow-hidden">
-                    <img src="https://i.pravatar.cc/150?u=kb" alt="Author" className="w-full h-full object-cover" />
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&q=80" alt="Author" className="w-full h-full object-cover" />
                   </div>
                   <div>
                     <div className="text-gray-900 font-teko text-xl font-bold leading-none uppercase">{post.author}</div>

@@ -6,42 +6,42 @@ const TEAM_MEMBERS = [
   {
     name: "Thomas Anderson",
     role: "CEO & Founder",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop",
+    image: "/team_leader_thomas_1768044147494.png",
     category: "Leadership",
     social: { linkedin: "#", twitter: "#" }
   },
   {
-    name: "Sarah Jenkins",
+    name: "Samuel Jenkins",
     role: "Creative Director",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop",
+    image: "/team_designer_samuel_1768044164446.png",
     category: "Design",
     social: { linkedin: "#", instagram: "#" }
   },
   {
     name: "Michael Chen",
     role: "Lead Developer",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop",
+    image: "/team_developer_michael_1768044218074.png",
     category: "Engineering",
     social: { linkedin: "#", github: "#" }
   },
   {
-    name: "Emily Rodriguez",
+    name: "Elias Rodriguez",
     role: "Head of Marketing",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop",
+    image: "/team_marketer_elias_1768044179744.png",
     category: "Marketing",
     social: { linkedin: "#", twitter: "#" }
   },
   {
     name: "David Smith",
     role: "Senior UI Designer",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=500&fit=crop",
+    image: "/team_ui_designer_david_1768044237426.png",
     category: "Design",
     social: { linkedin: "#", dribbble: "#" }
   },
   {
-    name: "Jessica Lee",
+    name: "Julian Lee",
     role: "Backend Architect",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=500&fit=crop",
+    image: "/team_engineer_julian_1768044195112.png",
     category: "Engineering",
     social: { linkedin: "#", github: "#" }
   }

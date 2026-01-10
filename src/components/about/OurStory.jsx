@@ -11,7 +11,7 @@ const OurStory = () => {
             <div className="relative h-full">
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand/10 rounded-full blur-[80px]"></div>
               <img 
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1000&q=80" 
+                src="/agency_office_1768044580348.png" 
                 alt="Our Office" 
                 className="rounded-[3rem] w-full h-full object-cover shadow-2xl relative z-10"
               />

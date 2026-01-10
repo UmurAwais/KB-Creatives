@@ -77,8 +77,8 @@ const WhyChooseUs = () => {
               {/* Main Image Container */}
               <div className="relative z-10 rounded-[3rem] overflow-hidden flex-grow min-h-[400px] shadow-2xl transition-transform duration-700 group-hover/image:scale-[1.02]">
                 <img 
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=90" 
-                  alt="Team collaboration" 
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=90" 
+                  alt="Modern Office" 
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover/image:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>

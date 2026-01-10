@@ -7,21 +7,21 @@ const blogPosts = [
     excerpt: "Explore the latest shifts in digital aesthetics and how they are reshaping the way we think about user experiences.",
     date: "Jan 08, 2026",
     category: "Design",
-    image: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&q=80"
+    image: "/blog_design_trends_1768044637855.png"
   },
   {
     title: "The Future of Web Development with AI Integration",
     excerpt: "How artificial intelligence is revolutionizing the workflow of developers and creating more intelligent web applications.",
     date: "Jan 05, 2026",
     category: "Development",
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80"
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"
   },
   {
     title: "Why Brand Identity Matters More Than Ever in 2026",
     excerpt: "Discover why a solid brand foundation is the key to standing out in a crowded and competitive digital marketplace.",
     date: "Jan 02, 2026",
     category: "Branding",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80"
+    image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80"
   }
 ]
 

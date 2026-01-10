@@ -9,7 +9,7 @@ const BannerSlider = () => {
     {
       title: "CREATIVITY ABOVE ALL",
       description: "We are a full-service digital agency that builds fascinating user experiences; our team creates exceptional UI design and functionality.",
-      image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1200&q=90",
+      image: "https://images.unsplash.com/photo-1558655146-216d21590234?w=1200&q=90",
       bgImage: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=1200&q=90"
     },
     {
