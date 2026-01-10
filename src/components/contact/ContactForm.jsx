@@ -91,7 +91,7 @@ const ContactForm = () => {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center text-gray-400 hover:text-brand hover:border-brand transition-all duration-300 cursor-pointer"
+                        className="w-12 h-12 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-400 hover:text-brand hover:bg-brand/5 hover:border-brand/20 transition-all duration-300 cursor-pointer"
                       >
                         <span className="sr-only">{social.name}</span>
                         {social.icon}
