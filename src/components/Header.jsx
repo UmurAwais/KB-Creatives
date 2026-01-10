@@ -80,7 +80,11 @@ const Header = ({ navigation }) => {
       >
       <div className="max-w-site mx-auto px-6 md:px-12 flex items-center justify-between h-14 md:h-16">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 group transition-transform duration-300">
+        <Link 
+          to="/" 
+          className="flex items-center gap-2 group transition-transform duration-300"
+          onClick={() => setMobileMenuOpen(false)}
+        >
           <img 
             src={logo} 
             alt="KB Creatives" 
@@ -284,7 +288,7 @@ const Header = ({ navigation }) => {
               <Link 
                 to={item.href}
                 className="text-3xl font-outfit font-semibold text-gray-900 no-underline flex items-center justify-between"
-                onClick={() => !item.dropdown && setMobileMenuOpen(false)}
+                onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
                 {item.dropdown && <span className="w-1.5 h-1.5 rounded-full bg-brand"></span>}

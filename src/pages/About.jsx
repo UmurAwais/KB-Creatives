@@ -47,7 +47,7 @@ const About = () => {
           <Services />
         </div>
         <FAQ items={aboutFAQs} />
-        <JoinTeamCTA />
+        {/* <JoinTeamCTA /> */}
       </main>
       <Footer />
     </div>

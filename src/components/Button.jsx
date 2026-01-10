@@ -24,7 +24,7 @@ const Button = ({
 
   if (to) {
     return (
-      <Link to={to} className={combinedClasses} {...props}>
+      <Link to={to} className={combinedClasses} onClick={onClick} {...props}>
         {children}
         {iconElement}
       </Link>

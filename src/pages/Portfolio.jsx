@@ -20,6 +20,9 @@ const Portfolio = () => {
     else if (path.includes('web-development')) setActiveFilter('web-development')
     else if (path.includes('content-strategy')) setActiveFilter('content-strategy')
     else if (path.includes('video-editing')) setActiveFilter('video-editing')
+    else if (path.includes('shopify-development')) setActiveFilter('shopify-development')
+    else if (path.includes('graphic-design')) setActiveFilter('graphic-design')
+    else if (path.includes('content-monetization')) setActiveFilter('content-monetization')
     else setActiveFilter('all')
   }, [location])
 
@@ -53,7 +56,10 @@ const Portfolio = () => {
     { id: 'ui-ux-design', name: 'UI/UX Design' },
     { id: 'web-development', name: 'Web Development' },
     { id: 'content-strategy', name: 'Content Strategy' },
-    { id: 'video-editing', name: 'Video Editing' }
+    { id: 'video-editing', name: 'Video Editing' },
+    { id: 'shopify-development', name: 'Shopify Development' },
+    { id: 'graphic-design', name: 'Graphic Design' },
+    { id: 'content-monetization', name: 'Content Monetization' }
   ]
 
   const projects = [
@@ -137,6 +143,33 @@ const Portfolio = () => {
       description: 'Complete visual identity overhaul for global enterprise',
       image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=90',
       color: 'from-red-500/10 to-orange-500/10'
+    },
+    {
+      id: 10,
+      title: 'Premium E-Commerce Store',
+      category: 'shopify-development',
+      tags: ['Shopify Development', 'Web Development'],
+      description: 'Custom Shopify store with 300% increase in conversions',
+      image: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&q=90',
+      color: 'from-green-500/10 to-emerald-500/10'
+    },
+    {
+      id: 11,
+      title: 'Brand Visual Identity',
+      category: 'graphic-design',
+      tags: ['Graphic Design', 'Brand Identity'],
+      description: 'Complete design system from logo to marketing collateral',
+      image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=90',
+      color: 'from-purple-500/10 to-pink-500/10'
+    },
+    {
+      id: 12,
+      title: 'Creator Revenue Platform',
+      category: 'content-monetization',
+      tags: ['Content Monetization', 'Digital Marketing'],
+      description: 'Monetization strategy generating $50K+ monthly revenue',
+      image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=90',
+      color: 'from-yellow-500/10 to-orange-500/10'
     }
   ]
 
@@ -194,20 +227,52 @@ const Portfolio = () => {
         {/* Filter Section */}
         <section className="py-12 border-y border-gray-100 sticky top-20 bg-white/95 backdrop-blur-xl z-40">
           <div className="max-w-site mx-auto px-6 md:px-12">
-            <div className="flex flex-wrap justify-center gap-3">
-              {filters.map((filter) => (
-                <button
-                  key={filter.id}
-                  onClick={() => setActiveFilter(filter.id)}
-                  className={`px-6 py-3 rounded-full font-outfit text-sm font-medium transition-all duration-300 cursor-pointer ${
-                    activeFilter === filter.id
-                      ? 'bg-brand text-white shadow-lg shadow-brand/30'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                  }`}
-                >
-                  {filter.name}
-                </button>
-              ))}
+            <div className="relative group">
+              {/* Left Arrow */}
+              <button
+                onClick={() => {
+                  const container = document.getElementById('filter-scroll-container');
+                  container.scrollBy({ left: -300, behavior: 'smooth' });
+                }}
+                className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-gray-600 hover:text-brand hover:border-brand transition-all duration-300"
+                aria-label="Scroll left"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              {/* Right Arrow */}
+              <button
+                onClick={() => {
+                  const container = document.getElementById('filter-scroll-container');
+                  container.scrollBy({ left: 300, behavior: 'smooth' });
+                }}
+                className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-gray-600 hover:text-brand hover:border-brand transition-all duration-300"
+                aria-label="Scroll right"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+
+              <div id="filter-scroll-container" className="overflow-x-auto scrollbar-hide scroll-smooth">
+                <div className="flex justify-start gap-3 px-14 md:px-20 min-w-max">
+                  {filters.map((filter) => (
+                    <button
+                      key={filter.id}
+                      onClick={() => setActiveFilter(filter.id)}
+                      className={`px-6 py-3 rounded-full font-outfit text-sm font-medium transition-all duration-300 cursor-pointer whitespace-nowrap ${
+                        activeFilter === filter.id
+                          ? 'bg-brand text-white shadow-lg shadow-brand/30'
+                          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                      }`}
+                    >
+                      {filter.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>

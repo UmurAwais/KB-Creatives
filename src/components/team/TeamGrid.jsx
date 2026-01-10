@@ -109,20 +109,52 @@ const TeamGrid = () => {
     <section className="py-24 bg-white">
       <div className="max-w-site mx-auto px-6 md:px-12">
         {/* Category Filter */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-20">
-          {CATEGORIES.map(cat => (
-            <button
-              key={cat}
-              onClick={() => setActiveTab(cat)}
-              className={`px-8 py-3 rounded-full font-teko text-xl font-bold uppercase tracking-widest transition-all duration-300 border-2 ${
-                activeTab === cat 
-                  ? 'bg-brand border-brand text-gray-900 shadow-xl shadow-brand/20' 
-                  : 'bg-transparent border-gray-100 text-gray-400 hover:border-brand hover:text-brand'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+        <div className="relative group mb-20">
+          {/* Left Arrow */}
+          <button
+            onClick={() => {
+              const container = document.getElementById('team-filter-scroll-container');
+              container.scrollBy({ left: -200, behavior: 'smooth' });
+            }}
+            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-gray-600 hover:text-brand hover:border-brand transition-all duration-300"
+            aria-label="Scroll left"
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Right Arrow */}
+          <button
+            onClick={() => {
+              const container = document.getElementById('team-filter-scroll-container');
+              container.scrollBy({ left: 200, behavior: 'smooth' });
+            }}
+            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-gray-600 hover:text-brand hover:border-brand transition-all duration-300"
+            aria-label="Scroll right"
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          <div id="team-filter-scroll-container" className="overflow-x-auto scrollbar-hide scroll-smooth">
+            <div className="flex justify-start md:justify-center gap-4 px-14 md:px-20 min-w-max">
+              {CATEGORIES.map(cat => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveTab(cat)}
+                  className={`px-6 py-2.5 rounded-full font-outfit text-sm font-medium transition-all duration-300 whitespace-nowrap cursor-pointer ${
+                    activeTab === cat 
+                      ? 'bg-brand text-white shadow-lg shadow-brand/30' 
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Grid */}

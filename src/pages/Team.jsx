@@ -39,7 +39,7 @@ const Team = () => {
         <TeamHero />
         <TeamGrid />
         <FAQ items={teamFAQs} title="Our Culture" subtitle="F.A.Q." />
-        <JoinTeamCTA />
+        {/* <JoinTeamCTA /> */}
       </main>
       <Footer />
     </div>

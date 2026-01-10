@@ -266,4 +266,13 @@
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: rgba(245, 180, 25, 0.3);
   }
+
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
