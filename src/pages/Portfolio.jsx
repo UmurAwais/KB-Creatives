@@ -132,7 +132,7 @@ const Portfolio = () => {
       category: 'content-strategy',
       tags: ['Content Strategy', 'Digital Marketing'],
       description: 'Building thought leadership through strategic storytelling',
-      image: '/portfolio_content_marketing_176804429810.png',
+      image: '/portfolio_content_marketing_1768044429810.png',
       color: 'from-emerald-500/10 to-green-500/10'
     },
     {
