@@ -23,12 +23,12 @@ export const navigationConfig = [
     name: 'Portfolio', 
     href: '/portfolio',
     dropdown: [
+      { name: 'Digital Marketing', href: '/portfolio/digital-marketing' },
+      { name: 'Brand Identity', href: '/portfolio/brand-identity' },
       { name: 'UI/UX Design', href: '/portfolio/ui-ux-design' },
       { name: 'Web Development', href: '/portfolio/web-development' },
-      { name: 'Brand Identity', href: '/portfolio/brand-identity' },
-      { name: 'Digital Marketing', href: '/portfolio/digital-marketing' },
-      { name: 'Video Editing', href: '/portfolio/video-editing' },
       { name: 'Content Strategy', href: '/portfolio/content-strategy' },
+      { name: 'Video Editing', href: '/portfolio/video-editing' },
       { name: 'Shopify Development', href: '/portfolio/shopify-development' },
       { name: 'Graphic Design', href: '/portfolio/graphic-design' },
       { name: 'Content Monetization', href: '/portfolio/content-monetization' }

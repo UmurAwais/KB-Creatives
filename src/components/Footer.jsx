@@ -17,9 +17,11 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
+      { name: 'Digital Marketing', href: '/portfolio/digital-marketing' },
+      { name: 'Brand Identity', href: '/portfolio/brand-identity' },
       { name: 'UI/UX Design', href: '/portfolio/ui-ux-design' },
       { name: 'Web Development', href: '/portfolio/web-development' },
-      { name: 'Digital Marketing', href: '/portfolio/digital-marketing' },
+      { name: 'Content Strategy', href: '/portfolio/content-strategy' },
       { name: 'Video Editing', href: '/portfolio/video-editing' },
       { name: 'Shopify Development', href: '/portfolio/shopify-development' },
       { name: 'Graphic Design', href: '/portfolio/graphic-design' },
