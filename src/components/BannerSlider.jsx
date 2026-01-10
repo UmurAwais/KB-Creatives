@@ -9,20 +9,20 @@ const BannerSlider = () => {
     {
       title: "CREATIVITY ABOVE ALL",
       description: "We are a full-service digital agency that builds fascinating user experiences; our team creates exceptional UI design and functionality.",
-      image: "https://images.unsplash.com/photo-1558655146-216d21590234?w=1200&q=90",
-      bgImage: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=1200&q=90"
+      image: "/blog_design_trends_1768044637855.png",
+      bgImage: "/agency_office_1768044580348.png"
     },
     {
       title: "INNOVATION DRIVES US",
       description: "Pushing the boundaries of technology to deliver smart, scalable solutions that transform how businesses interact with the digital world.",
-      image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1200&q=90",
-      bgImage: "https://images.unsplash.com/photo-1557683316-973673baf926?w=1200&q=90"
+      image: "/portfolio_saas_1768044355258.png",
+      bgImage: "/portfolio_fintech_1768044284286.png"
     },
     {
       title: "DESIGN THAT SPEAKS",
       description: "Crafting visual identities that resonate. We combine aesthetics with purpose to build brands that leave a lasting impression.",
-      image: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200&q=90",
-      bgImage: "https://images.unsplash.com/photo-1550684847-75bdda21cc95?w=1200&q=90"
+      image: "/portfolio_graphic_design_1768044491226.png",
+      bgImage: "/portfolio_corporate_rebrand_1768044460369.png"
     }
   ]
 
