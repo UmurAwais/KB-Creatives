@@ -91,7 +91,7 @@ const PrivacyPolicy = () => {
       content: [
         {
           subtitle: "Access and Correction",
-          text: "You have the right to access, update, or correct your personal information at any time. Contact us at hello@kbcreatives.com to request access to or modification of your data."
+          text: "You have the right to access, update, or correct your personal information at any time. Contact us at info@kbcreatives.pk to request access to or modification of your data."
         },
         {
           subtitle: "Data Deletion",
@@ -147,7 +147,7 @@ const PrivacyPolicy = () => {
         },
         {
           subtitle: "Contact Information",
-          text: "Email: hello@kbcreatives.com\nPhone: +1 (555) 123-4567\nAddress: 123 Creative Blvd, Digital City, DC 20001"
+          text: "Email: info@kbcreatives.pk\nPhone: (+92) 300 0069835\nAddress: 51/G1 College Road, Chishtian Mandi"
         }
       ]
     }

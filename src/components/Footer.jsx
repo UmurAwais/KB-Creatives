@@ -147,7 +147,7 @@ const Footer = () => {
                 <div>
                   <div className="text-white/40 font-outfit text-xs uppercase tracking-[0.2em] mb-1">Visit Us</div>
                   <div className="text-white/70 font-outfit text-[15px] leading-snug">
-                    123 Innovation Drive,<br />Creative Hub, City 4567
+                    51/G1 College Road,<br />Chishtian Mandi
                   </div>
                 </div>
               </div>
@@ -157,8 +157,8 @@ const Footer = () => {
                 </div>
                 <div>
                   <div className="text-white/40 font-outfit text-xs uppercase tracking-[0.2em] mb-1">Say Hello</div>
-                  <a href="mailto:hello@kbcreatives.com" className="text-white/70 hover:text-white font-outfit text-[15px] transition-colors block">
-                    hello@kbcreatives.com
+                  <a href="mailto:info@kbcreatives.pk" className="text-white/70 hover:text-white font-outfit text-[15px] transition-colors block">
+                    info@kbcreatives.pk
                   </a>
                 </div>
               </div>
@@ -168,7 +168,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <div className="text-white/40 font-outfit text-xs uppercase tracking-[0.2em] mb-1">Call Us</div>
-                  <div className="text-white/70 font-outfit text-[15px]">+1 (555) 123-4567</div>
+                  <div className="text-white/70 font-outfit text-[15px]">(+92) 300 0069835</div>
                 </div>
               </div>
             </div>

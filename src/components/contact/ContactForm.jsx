@@ -44,7 +44,7 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <div className="text-gray-400 font-outfit text-xs font-bold uppercase tracking-widest mb-1">Email Us</div>
-                      <div className="text-xl font-teko font-bold text-gray-900 tracking-tight">hello@kbcreatives.com</div>
+                      <div className="text-xl font-teko font-bold text-gray-900 tracking-tight">info@kbcreatives.pk</div>
                     </div>
                   </div>
 
@@ -54,7 +54,7 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <div className="text-gray-400 font-outfit text-xs font-bold uppercase tracking-widest mb-1">Call Us</div>
-                      <div className="text-xl font-teko font-bold text-gray-900 tracking-tight">+1 (555) 123-4567</div>
+                      <div className="text-xl font-teko font-bold text-gray-900 tracking-tight">(+92) 300 0069835</div>
                     </div>
                   </div>
 
@@ -64,7 +64,7 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <div className="text-gray-400 font-outfit text-xs font-bold uppercase tracking-widest mb-1">Visit Us</div>
-                      <div className="text-xl font-teko font-bold text-gray-900 tracking-tight">123 Creative Blvd, Digital City, DC 20001</div>
+                      <div className="text-xl font-teko font-bold text-gray-900 tracking-tight">51/G1 College Road, Chishtian Mandi</div>
                     </div>
                   </div>
                 </div>

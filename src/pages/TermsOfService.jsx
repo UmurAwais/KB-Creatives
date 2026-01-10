@@ -231,7 +231,7 @@ const TermsOfService = () => {
         },
         {
           subtitle: "Contact Details",
-          text: "Email: hello@kbcreatives.com\nPhone: +1 (555) 123-4567\nAddress: 123 Creative Blvd, Digital City, DC 20001"
+          text: "Email: info@kbcreatives.pk\nPhone: (+92) 300 0069835\nAddress: 51/G1 College Road, Chishtian Mandi"
         }
       ]
     }
