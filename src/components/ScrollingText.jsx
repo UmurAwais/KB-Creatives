@@ -7,10 +7,10 @@ const ScrollingText = () => {
   return (
     <div className="relative w-full bg-white overflow-hidden py-10 md:py-20 border-y border-gray-100 select-none">
       <div className="flex animate-marquee whitespace-nowrap">
-        <h2 className="shrink-0 font-teko font-black text-[80px] md:text-[150px] lg:text-[200px] leading-none tracking-tighter text-gray-100 uppercase">
+        <h2 className="shrink-0 font-teko font-black text-[80px] md:text-[150px] lg:text-[200px] leading-none tracking-tighter text-gray-300 uppercase">
           {repeatedText} —&nbsp;
         </h2>
-        <h2 className="shrink-0 font-teko font-black text-[80px] md:text-[150px] lg:text-[200px] leading-none tracking-tighter text-gray-100 uppercase">
+        <h2 className="shrink-0 font-teko font-black text-[80px] md:text-[150px] lg:text-[200px] leading-none tracking-tighter text-gray-300 uppercase">
           {repeatedText} —&nbsp;
         </h2>
       </div>
