@@ -49,8 +49,8 @@ const BannerSlider = () => {
       <div className="flex flex-col lg:grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         
         {/* Left Text Side */}
-        <div className="w-full lg:col-span-6 relative z-30 text-left order-2 lg:order-1">
-          <div className="relative inline-block lg:block text-left w-full lg:w-auto">
+        <div className="w-full lg:col-span-6 relative z-30 text-center lg:text-left order-2 lg:order-1">
+          <div className="relative inline-block lg:block w-full lg:w-auto">
             {/* Decorative side line */}
             <div className="hidden lg:block absolute -left-10 top-0 bottom-0 w-[2px] bg-black/[0.05] overflow-hidden">
               <div 
@@ -72,7 +72,7 @@ const BannerSlider = () => {
                 transform: isTransitioning ? 'translateY(20px)' : 'translateY(0)'
               }}
             >
-              <h1 className="font-teko font-bold text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl leading-[0.85] uppercase tracking-tighter text-black">
+              <h1 className="font-teko font-bold text-6xl md:text-7xl lg:text-8xl xl:text-8xl 2xl:text-9xl leading-[0.9] uppercase tracking-tighter text-black">
                 {slides[currentSlide].title.split(' ')[0]}
                 <br />
                 <span className="text-[#F5B419]">{slides[currentSlide].title.split(' ')[1]}</span>
@@ -91,13 +91,13 @@ const BannerSlider = () => {
               transform: isTransitioning ? 'translateY(20px)' : 'translateY(0)'
             }}
           >
-            <p className="text-gray-500 text-base md:text-lg max-w-lg font-outfit font-light leading-relaxed">
+            <p className="text-gray-500 text-base md:text-lg max-w-lg mx-auto lg:mx-0 font-outfit font-light leading-relaxed">
               {slides[currentSlide].description}
             </p>
           </div>
 
           <div 
-            className={`mt-10 flex flex-wrap justify-start gap-5 transition-all cubic-bezier(0.4, 0, 0.2, 1)`}
+            className={`mt-10 flex flex-wrap justify-center lg:justify-start gap-5 transition-all cubic-bezier(0.4, 0, 0.2, 1)`}
             style={{ 
               transitionDuration: `${TRANSITION_SPEED}ms`,
               transitionDelay: isTransitioning ? '0ms' : '300ms',
@@ -114,7 +114,7 @@ const BannerSlider = () => {
           </div>
 
           {/* Slide Indicators */}
-          <div className="mt-16 flex justify-start items-center gap-6">
+          <div className="mt-16 flex justify-center lg:justify-start items-center gap-6">
             <div className="flex gap-4">
               {slides.map((_, i) => (
                 <button 
