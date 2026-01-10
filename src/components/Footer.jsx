@@ -138,37 +138,41 @@ const Footer = () => {
 
           {/* Contact Details with Lucide Icons */}
           <div>
-            <h4 className="text-white font-teko text-2xl font-bold uppercase tracking-tight mb-8">Get In Touch</h4>
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="shrink-0 w-10 h-10 rounded-xl bg-brand/5 flex items-center justify-center text-brand">
-                  <MapPin size={18} />
+            <h4 className="text-white font-teko text-2xl font-bold uppercase tracking-tight mb-10">Get In Touch</h4>
+            <div className="space-y-8">
+              <div className="flex items-start gap-4 group">
+                <div className="shrink-0 w-11 h-11 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center text-brand transition-all duration-300 group-hover:bg-brand/10 group-hover:border-brand/20">
+                  <MapPin size={20} />
                 </div>
-                <div>
-                  <div className="text-white/40 font-outfit text-xs uppercase tracking-[0.2em] mb-1">Visit Us</div>
-                  <div className="text-white/70 font-outfit text-[15px] leading-snug">
+                <div className="pt-0.5">
+                  <div className="text-white/30 font-outfit text-xs font-bold uppercase tracking-[0.2em] mb-1.5">Visit Us</div>
+                  <div className="text-white/80 font-outfit text-[15px] leading-relaxed">
                     51/G1 College Road,<br />Chishtian Mandi
                   </div>
                 </div>
               </div>
-              <div className="flex gap-4">
-                <div className="shrink-0 w-10 h-10 rounded-xl bg-brand/5 flex items-center justify-center text-brand">
-                  <Mail size={18} />
+
+              <div className="flex items-start gap-4 group">
+                <div className="shrink-0 w-11 h-11 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center text-brand transition-all duration-300 group-hover:bg-brand/10 group-hover:border-brand/20">
+                  <Mail size={20} />
                 </div>
-                <div>
-                  <div className="text-white/40 font-outfit text-xs uppercase tracking-[0.2em] mb-1">Say Hello</div>
-                  <a href="mailto:info@kbcreatives.pk" className="text-white/70 hover:text-white font-outfit text-[15px] transition-colors block">
+                <div className="pt-0.5">
+                  <div className="text-white/30 font-outfit text-xs font-bold uppercase tracking-[0.2em] mb-1.5">Say Hello</div>
+                  <a href="mailto:info@kbcreatives.pk" className="text-white/80 hover:text-white font-outfit text-[15px] transition-colors block">
                     info@kbcreatives.pk
                   </a>
                 </div>
               </div>
-              <div className="flex gap-4">
-                <div className="shrink-0 w-10 h-10 rounded-xl bg-brand/5 flex items-center justify-center text-brand">
-                  <Phone size={18} />
+
+              <div className="flex items-start gap-4 group">
+                <div className="shrink-0 w-11 h-11 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center text-brand transition-all duration-300 group-hover:bg-brand/10 group-hover:border-brand/20">
+                  <Phone size={20} />
                 </div>
-                <div>
-                  <div className="text-white/40 font-outfit text-xs uppercase tracking-[0.2em] mb-1">Call Us</div>
-                  <div className="text-white/70 font-outfit text-[15px]">(+92) 300 0069835</div>
+                <div className="pt-0.5">
+                  <div className="text-white/30 font-outfit text-xs font-bold uppercase tracking-[0.2em] mb-1.5">Call Us</div>
+                  <a href="tel:+923000069835" className="text-white/80 hover:text-white font-outfit text-[15px] transition-colors block">
+                    (+92) 300 0069835
+                  </a>
                 </div>
               </div>
             </div>
