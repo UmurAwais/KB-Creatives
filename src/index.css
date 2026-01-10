@@ -34,8 +34,8 @@
 /* Custom Menu Hover Effects */
 @layer components {
   .text-outline {
+    -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px currentColor;
-    color: transparent !important;
   }
   .menu-link {
     position: relative;
