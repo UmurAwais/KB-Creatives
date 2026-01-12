@@ -8,6 +8,7 @@ import CueImg from '../assets/cuestudio.png'
 import BFMakeupImg from '../assets/bfmakeup.png'
 import SemblissImg from '../assets/sembliss.png'
 import KrayzImg from '../assets/krayz.png'
+import DairylandImg from '../assets/dairyland.png'
 
 const Portfolio = () => {
   const location = useLocation()
@@ -182,6 +183,16 @@ const Portfolio = () => {
       image: KrayzImg,
       color: 'from-blue-600/10 to-indigo-500/10',
       link: 'https://krayz.pk/'
+    },
+    {
+      id: 15,
+      title: 'Dairyland',
+      category: 'shopify-development',
+      tags: ['Shopify Development', 'Organic Food', 'E-commerce Management'],
+      description: 'A premium organic and natural food brand providing authentic traditional Pakistani food products.',
+      image: DairylandImg,
+      color: 'from-green-600/10 to-emerald-500/10',
+      link: 'https://dairyland.com.pk/'
     },
     {
       id: 11,
