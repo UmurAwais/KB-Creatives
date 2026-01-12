@@ -1,53 +1,80 @@
 import React, { useState } from 'react'
 import MotionSection from '../about/MotionSection'
-import { Linkedin, Twitter, Github, Instagram } from 'lucide-react'
+import { Linkedin, Twitter, Github, Instagram, Facebook } from 'lucide-react'
+
+import Umar from "../../assets/Umar Awais.png"
+import Mudassir from "../../assets/Mudassir Saleem.png"
+import Mazhar from "../../assets/Mazhar Hussain.png"
+import Talha from "../../assets/Talha Shahbaz.png"
+import Yasir from "../../assets/Yasir Azad.png"
 
 const TEAM_MEMBERS = [
   {
-    name: "Thomas Anderson",
+    name: "Sajid Ali",
     role: "CEO & Founder",
     image: "/team_leader_thomas_1768044147494.png",
     category: "Leadership",
     social: { linkedin: "#", twitter: "#" }
   },
   {
-    name: "Samuel Jenkins",
-    role: "Creative Director",
+    name: "Hafiza Adila Fazal",
+    role: "Managing Director",
     image: "/team_designer_samuel_1768044164446.png",
+    category: "Leadership",
+    social: { linkedin: "#", instagram: "#" }
+  },
+  {
+    name: "Umar Awais",
+    role: "Lead Developer",
+    image: Umar,
+    category: "Engineering",
+    social: { linkedin: "https://www.linkedin.com/in/umurawais/", facebook: "https://www.facebook.com/umarawaisofficial", github: "https://github.com/UmurAwais" }
+  },
+  {
+    name: "Yasir Azad",
+    role: "Head of Marketing",
+    image: Yasir,
+    category: "Marketing",
+    social: { linkedin: "https://www.linkedin.com/in/yasir-azad-78a060348/", facebook: "#" }
+  },
+  {
+    name: "Ehtisham Ul Zaman",
+    role: "Lead Graphic Designer",
+    image: "/team_ui_designer_david_1768044237426.png",
     category: "Design",
     social: { linkedin: "#", instagram: "#" }
   },
   {
-    name: "Michael Chen",
-    role: "Lead Developer",
-    image: "/team_developer_michael_1768044218074.png",
+    name: "Mudassir Saleem",
+    role: "Full-Stack Developer",
+    image: Mudassir,
     category: "Engineering",
-    social: { linkedin: "#", github: "#" }
+    social: { linkedin: "https://www.linkedin.com/in/mudassir-saleem-b9a507391/", github: "https://github.com/mudassirsaleem47", facebook: "https://www.facebook.com/chmudassir0.2/" }
   },
   {
-    name: "Elias Rodriguez",
-    role: "Head of Marketing",
-    image: "/team_marketer_elias_1768044179744.png",
-    category: "Marketing",
-    social: { linkedin: "#", twitter: "#" }
+    name: "Mazhar Hussain",
+    role: "Lead Video Editor",
+    image: Mazhar,
+    category: "Production",
+    social: { linkedin: "#", instagram: "#" }
   },
   {
-    name: "David Smith",
-    role: "Senior UI Designer",
-    image: "/team_ui_designer_david_1768044237426.png",
-    category: "Design",
-    social: { linkedin: "#", dribbble: "#" }
+    name: "Talha Shahbaz",
+    role: "Video Editor",
+    image: Talha,
+    category: "Production",
+    social: { linkedin: "#", instagram: "#" }
   },
   {
-    name: "Julian Lee",
-    role: "Backend Architect",
+    name: "Muhammad Noman",
+    role: "Video Editor",
     image: "/team_engineer_julian_1768044195112.png",
-    category: "Engineering",
-    social: { linkedin: "#", github: "#" }
+    category: "Production",
+    social: { linkedin: "#", instagram: "#" }
   }
 ]
 
-const CATEGORIES = ["All", "Leadership", "Design", "Engineering", "Marketing"]
+const CATEGORIES = ["All", "Leadership", "Design", "Engineering", "Marketing", "Production"]
 
 const MemberCard = ({ member, index }) => {
   return (
@@ -63,23 +90,28 @@ const MemberCard = ({ member, index }) => {
         <div className="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-gray-900/90 to-transparent">
           <div className="flex items-center justify-center gap-4">
             {member.social.linkedin && (
-              <a href={member.social.linkedin} className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-brand hover:text-gray-900 transition-all duration-300">
+              <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-brand hover:text-gray-900 transition-all duration-300">
                 <Linkedin size={18} />
               </a>
             )}
             {member.social.twitter && (
-              <a href={member.social.twitter} className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-brand hover:text-gray-900 transition-all duration-300">
+              <a href={member.social.twitter} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-brand hover:text-gray-900 transition-all duration-300">
                 <Twitter size={18} />
               </a>
             )}
             {member.social.github && (
-              <a href={member.social.github} className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-brand hover:text-gray-900 transition-all duration-300">
+              <a href={member.social.github} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-brand hover:text-gray-900 transition-all duration-300">
                 <Github size={18} />
               </a>
             )}
             {member.social.instagram && (
-              <a href={member.social.instagram} className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-brand hover:text-gray-900 transition-all duration-300">
+              <a href={member.social.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-brand hover:text-gray-900 transition-all duration-300">
                 <Instagram size={18} />
+              </a>
+            )}
+            {member.social.facebook && (
+              <a href={member.social.facebook} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-brand hover:text-gray-900 transition-all duration-300">
+                <Facebook size={18} />
               </a>
             )}
           </div>
