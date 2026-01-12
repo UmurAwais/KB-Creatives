@@ -4,6 +4,7 @@ import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
 import HassanImg from '../assets/hassan-associates.png'
 import EvoSolImg from '../assets/theevosol.png'
+import CueImg from '../assets/cuestudio.png'
 
 const Portfolio = () => {
   const location = useLocation()
@@ -87,12 +88,13 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      title: 'E-Commerce Excellence',
-      category: 'ui-ux-design',
-      tags: ['UI/UX Design', 'Web Development'],
-      description: 'Crafting seamless shopping experiences that convert',
-      image: '/portfolio_ecommerce_1768044314997.png',
-      color: 'from-green-500/10 to-teal-500/10'
+      title: 'Cue Studio',
+      category: 'video-editing',
+      tags: ['Podcast Production', 'Studio Rental', 'Content Creation'],
+      description: 'A premium turnkey podcasting facility providing professional studio sets and technical support.',
+      image: CueImg,
+      color: 'from-orange-500/10 to-red-500/10',
+      link: 'https://cuestudio.pk/'
     },
     {
       id: 4,
