@@ -7,6 +7,7 @@ import EvoSolImg from '../assets/theevosol.png'
 import CueImg from '../assets/cuestudio.png'
 import BFMakeupImg from '../assets/bfmakeup.png'
 import SemblissImg from '../assets/sembliss.png'
+import KrayzImg from '../assets/krayz.png'
 
 const Portfolio = () => {
   const location = useLocation()
@@ -171,6 +172,16 @@ const Portfolio = () => {
       image: SemblissImg,
       color: 'from-amber-600/10 to-orange-500/10',
       link: 'https://www.sembliss.com/'
+    },
+    {
+      id: 14,
+      title: 'Krayz',
+      category: 'shopify-development',
+      tags: ['Shopify Development', 'Fashion & Apparel', 'Lifestyle Brand'],
+      description: 'A premium clothing brand offering stylish athletic and casual wear for the modern generation.',
+      image: KrayzImg,
+      color: 'from-blue-600/10 to-indigo-500/10',
+      link: 'https://krayz.pk/'
     },
     {
       id: 11,
