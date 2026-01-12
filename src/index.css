@@ -196,6 +196,15 @@
     }
   }
 
+  @keyframes shine {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+
   /* Marquee Animation */
   @keyframes marquee {
     0% { transform: translateX(0); }

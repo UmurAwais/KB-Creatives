@@ -7,6 +7,7 @@ import Mudassir from "../../assets/Mudassir Saleem.png"
 import Mazhar from "../../assets/Mazhar Hussain.png"
 import Talha from "../../assets/Talha Shahbaz.png"
 import Yasir from "../../assets/Yasir Azad.png"
+import Ehtisham from "../../assets/Ehtisham Ul Zaman.png"
 
 const TEAM_MEMBERS = [
   {
@@ -14,7 +15,7 @@ const TEAM_MEMBERS = [
     role: "CEO & Founder",
     image: "/team_leader_thomas_1768044147494.png",
     category: "Leadership",
-    social: { linkedin: "#", twitter: "#" }
+    social: { linkedin: "#", facebook: "https://www.facebook.com/isajidaliofficials" }
   },
   {
     name: "Hafiza Adila Fazal",
@@ -35,12 +36,12 @@ const TEAM_MEMBERS = [
     role: "Head of Marketing",
     image: Yasir,
     category: "Marketing",
-    social: { linkedin: "https://www.linkedin.com/in/yasir-azad-78a060348/", facebook: "#" }
+    social: { linkedin: "https://www.linkedin.com/in/yasir-azad-78a060348/", facebook: "https://www.facebook.com/yasir.azad.797399" }
   },
   {
     name: "Ehtisham Ul Zaman",
     role: "Lead Graphic Designer",
-    image: "/team_ui_designer_david_1768044237426.png",
+    image: Ehtisham,
     category: "Design",
     social: { linkedin: "#", instagram: "#" }
   },
@@ -56,14 +57,14 @@ const TEAM_MEMBERS = [
     role: "Lead Video Editor",
     image: Mazhar,
     category: "Production",
-    social: { linkedin: "#", instagram: "#" }
+    social: { linkedin: "#", instagram: "#", facebook: "https://www.facebook.com/veer.gee.33865" }
   },
   {
     name: "Talha Shahbaz",
     role: "Video Editor",
     image: Talha,
     category: "Production",
-    social: { linkedin: "#", instagram: "#" }
+    social: { linkedin: "#", facebook: "#" }
   },
   {
     name: "Muhammad Noman",
