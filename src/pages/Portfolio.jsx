@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
 import HassanImg from '../assets/hassan-associates.png'
+import EvoSolImg from '../assets/theevosol.png'
 
 const Portfolio = () => {
   const location = useLocation()
@@ -76,12 +77,13 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      title: 'Luxury Brand Refresh',
-      category: 'brand-identity',
-      tags: ['Brand Identity', 'Content Strategy'],
-      description: 'Redefining elegance through strategic brand positioning',
-      image: '/portfolio_luxury_brand_1768044298766.png',
-      color: 'from-amber-500/10 to-orange-500/10'
+      title: 'The EvoSol',
+      category: 'ui-ux-design',
+      tags: ['Strategic PR', 'Elite Networking', 'Software Dev'],
+      description: 'A high-end PR and networking agency connecting brands and building global influence.',
+      image: EvoSolImg,
+      color: 'from-blue-600/10 to-cyan-500/10',
+      link: 'https://theevosol.com/'
     },
     {
       id: 3,
