@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import HassanImg from '../assets/hassan-associates.png'
 import EvoSolImg from '../assets/theevosol.png'
 import CueImg from '../assets/cuestudio.png'
+import BFMakeupImg from '../assets/bfmakeup.png'
 
 const Portfolio = () => {
   const location = useLocation()
@@ -152,12 +153,13 @@ const Portfolio = () => {
     },
     {
       id: 10,
-      title: 'Premium E-Commerce Store',
+      title: 'But First, Makeup',
       category: 'shopify-development',
-      tags: ['Shopify Development', 'Web Development'],
-      description: 'Custom Shopify store with 300% increase in conversions',
-      image: '/portfolio_shopify_1768044475361.png',
-      color: 'from-green-500/10 to-emerald-500/10'
+      tags: ['Shopify Development', 'E-commerce', 'Luxury Beauty'],
+      description: 'A premium Shopify online boutique for authentic international luxury beauty brands.',
+      image: BFMakeupImg,
+      color: 'from-pink-500/10 to-rose-500/10',
+      link: 'https://bfmakeup.pk/'
     },
     {
       id: 11,
