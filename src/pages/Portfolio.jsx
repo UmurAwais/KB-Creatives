@@ -9,6 +9,7 @@ import BFMakeupImg from '../assets/bfmakeup.png'
 import SemblissImg from '../assets/sembliss.png'
 import KrayzImg from '../assets/krayz.png'
 import DairylandImg from '../assets/dairyland.png'
+import HumSubImg from '../assets/humsub.png'
 
 const Portfolio = () => {
   const location = useLocation()
@@ -193,6 +194,16 @@ const Portfolio = () => {
       image: DairylandImg,
       color: 'from-green-600/10 to-emerald-500/10',
       link: 'https://dairyland.com.pk/'
+    },
+    {
+      id: 16,
+      title: 'Hum Sub Store',
+      category: 'shopify-development',
+      tags: ['Shopify Development', 'Celebration & Gifting', 'Party Accessories'],
+      description: 'A premium one-stop shop for high-quality party accessories and gifting solutions in Pakistan.',
+      image: HumSubImg,
+      color: 'from-pink-500/10 to-rose-400/10',
+      link: 'https://www.humsubstore.com/'
     },
     {
       id: 11,
