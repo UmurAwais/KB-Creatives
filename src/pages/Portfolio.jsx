@@ -6,6 +6,7 @@ import HassanImg from '../assets/hassan-associates.png'
 import EvoSolImg from '../assets/theevosol.png'
 import CueImg from '../assets/cuestudio.png'
 import BFMakeupImg from '../assets/bfmakeup.png'
+import SemblissImg from '../assets/sembliss.png'
 
 const Portfolio = () => {
   const location = useLocation()
@@ -160,6 +161,16 @@ const Portfolio = () => {
       image: BFMakeupImg,
       color: 'from-pink-500/10 to-rose-500/10',
       link: 'https://bfmakeup.pk/'
+    },
+    {
+      id: 13,
+      title: 'Sembliss Cosmetics',
+      category: 'shopify-development',
+      tags: ['Shopify Development', 'Premium E-commerce', 'Authentic Beauty'],
+      description: 'A trusted destination for authentic international luxury beauty and skincare in Pakistan.',
+      image: SemblissImg,
+      color: 'from-amber-600/10 to-orange-500/10',
+      link: 'https://www.sembliss.com/'
     },
     {
       id: 11,
