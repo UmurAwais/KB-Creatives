@@ -10,6 +10,7 @@ import SemblissImg from '../assets/sembliss.png'
 import KrayzImg from '../assets/krayz.png'
 import DairylandImg from '../assets/dairyland.png'
 import HumSubImg from '../assets/humsub.png'
+import DiscoverChishtianImg from '../assets/discoverchishtian.png'
 
 const Portfolio = () => {
   const location = useLocation()
@@ -136,6 +137,16 @@ const Portfolio = () => {
       description: 'Award-winning mobile experience with 4.9★ rating',
       image: '/portfolio_mobile_app_1768044388985.png',
       color: 'from-cyan-500/10 to-blue-500/10'
+    },
+    {
+      id: 17,
+      title: 'Discover Chishtian',
+      category: 'web-development',
+      tags: ['Web Development', 'Community Portal', 'Digital Media'],
+      description: 'A comprehensive digital hub and news network providing localized information and business directory for the Chishtian community.',
+      image: DiscoverChishtianImg,
+      color: 'from-purple-600/10 to-indigo-500/10',
+      link: 'https://discoverchishtian.pk/'
     },
     {
       id: 8,

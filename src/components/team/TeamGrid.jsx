@@ -8,12 +8,13 @@ import Mazhar from "../../assets/Mazhar Hussain.png"
 import Talha from "../../assets/Talha Shahbaz.png"
 import Yasir from "../../assets/Yasir Azad.png"
 import Ehtisham from "../../assets/Ehtisham Ul Zaman.png"
+import Sajid from "../../assets/Sajid Ali.png"
 
 const TEAM_MEMBERS = [
   {
     name: "Sajid Ali",
     role: "CEO & Founder",
-    image: "/team_leader_thomas_1768044147494.png",
+    image: Sajid,
     category: "Leadership",
     social: { linkedin: "#", facebook: "https://www.facebook.com/isajidaliofficials" }
   },
