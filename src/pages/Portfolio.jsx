@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
+import HassanImg from '../assets/hassan-associates.png'
 
 const Portfolio = () => {
   const location = useLocation()
@@ -65,12 +66,13 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: 'FinTech Revolution',
+      title: 'Hassan Associates',
       category: 'web-development',
-      tags: ['Web Development', 'UI/UX Design'],
-      description: 'A complete digital transformation for a leading financial services platform',
-      image: '/portfolio_fintech_1768044284286.png',
-      color: 'from-blue-500/10 to-purple-500/10'
+      tags: ['Web Development', 'UI/UX Design', 'Real Estate'],
+      description: 'A premium real estate platform for Hassan Associates Realty Group, Lahore.',
+      image: HassanImg,
+      color: 'from-blue-500/10 to-purple-500/10',
+      link: 'https://hassanassociates.pk/'
     },
     {
       id: 2,
@@ -282,8 +284,11 @@ const Portfolio = () => {
           <div className="max-w-site mx-auto px-6 md:px-12">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredProjects.map((project, index) => (
-                <div
+                <a
                   key={project.id}
+                  href={project.link || '#'}
+                  target={project.link ? "_blank" : "_self"}
+                  rel={project.link ? "noopener noreferrer" : ""}
                   className={`group relative bg-white border border-gray-100 rounded-3xl overflow-hidden transition-all duration-700 hover:shadow-2xl hover:border-brand/30 cursor-pointer ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
                   }`}
@@ -332,7 +337,7 @@ const Portfolio = () => {
 
                   {/* Decorative Corner */}
                   <div className="absolute top-4 right-4 w-12 h-12 border-t-2 border-r-2 border-brand/0 group-hover:border-brand/50 transition-all duration-500 rounded-tr-2xl"></div>
-                </div>
+                </a>
               ))}
             </div>
 
