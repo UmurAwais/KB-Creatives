@@ -40,9 +40,9 @@ const Footer = () => {
   }
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com', icon: <Linkedin size={18} /> },
-    { name: 'Instagram', href: 'https://instagram.com', icon: <Instagram size={18} /> },
-    { name: 'Facebook', href: 'https://facebook.com', icon: <Facebook size={18} /> },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/kb-creatives/', icon: <Linkedin size={18} /> },
+    { name: 'Instagram', href: 'https://www.instagram.com/kb_creatives/', icon: <Instagram size={18} /> },
+    { name: 'Facebook', href: 'https://www.facebook.com/kbOfficials1', icon: <Facebook size={18} /> },
     { 
       name: 'X', 
       href: 'https://x.com', 

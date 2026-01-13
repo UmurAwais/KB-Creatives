@@ -90,9 +90,9 @@ const ContactForm = () => {
                   <h4 className="text-xl font-teko font-bold text-gray-900 uppercase tracking-tight mb-6">Follow Our Journey</h4>
                   <div className="flex gap-4">
                     {[
-                      { name: 'Instagram', icon: <Instagram size={20} />, href: 'https://instagram.com' },
-                      { name: 'Facebook', icon: <Facebook size={20} />, href: 'https://facebook.com' },
-                      { name: 'LinkedIn', icon: <Linkedin size={20} />, href: 'https://linkedin.com' },
+                      { name: 'Instagram', icon: <Instagram size={20} />, href: 'https://www.instagram.com/kb_creatives/' },
+                      { name: 'Facebook', icon: <Facebook size={20} />, href: 'https://www.facebook.com/kbOfficials1' },
+                      { name: 'LinkedIn', icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/company/kb-creatives/' },
                       { 
                         name: 'X', 
                         icon: (
