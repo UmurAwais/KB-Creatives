@@ -2,17 +2,16 @@ import React from 'react'
 import MotionSection from './MotionSection'
 import Button from '../Button'
 
-const JoinTeamCTA = () => {
+const ProjectCTA = () => {
   const [hoveredWord, setHoveredWord] = React.useState(null)
   
   const words = [
     { text: 'Ready', highlight: false },
     { text: 'To', highlight: false },
-    { text: 'Be', highlight: false },
-    { text: 'Part', highlight: false },
-    { text: 'Of', highlight: true },
-    { text: 'The', highlight: true },
-    { text: 'Story?', highlight: true }
+    { text: 'Build', highlight: false },
+    { text: 'Your', highlight: false },
+    { text: 'Digital', highlight: true },
+    { text: 'Legacy?', highlight: true }
   ]
 
   return (
@@ -28,7 +27,7 @@ const JoinTeamCTA = () => {
           <MotionSection direction="right" className="relative z-10">
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-[2px] bg-brand animate-width-grow"></div>
-              <span className="text-brand font-outfit text-sm font-bold uppercase tracking-[0.4em]">Career Opportunities</span>
+              <span className="text-brand font-outfit text-sm font-bold uppercase tracking-[0.4em]">Let's Work Together</span>
             </div>
             
             <h2 className="text-6xl md:text-7xl lg:text-8xl font-teko font-bold text-gray-900 leading-[0.8] uppercase tracking-tighter mb-8 cursor-default">
@@ -50,7 +49,7 @@ const JoinTeamCTA = () => {
             </h2>
             
             <p className="text-gray-500 font-outfit text-xl max-w-lg leading-relaxed mb-4">
-              We're building the future of digital experiences. Are you ready to join a team that values <span className="text-gray-900 font-semibold">innovation above all?</span>
+              We're building the future of digital experiences. Are you ready to partner with a team that values <span className="text-gray-900 font-semibold">innovation above all?</span>
             </p>
           </MotionSection>
 
@@ -58,28 +57,28 @@ const JoinTeamCTA = () => {
             <div className="flex flex-col sm:flex-row items-center gap-6">
               <Button 
                 variant="primary" 
-                to="/careers" 
+                to="/contact" 
                 className="w-full sm:w-auto !h-20 !px-12 !text-xl shadow-2xl shadow-brand/20 transform hover:scale-105 transition-all"
               >
-                Join Our Team
+                Start A Project
               </Button>
               <Button 
                 variant="secondary" 
-                to="/contact" 
+                to="/portfolio" 
                 className="w-full sm:w-auto !h-20 !px-12 !text-xl hover:bg-gray-50 transition-all"
               >
-                Contact Sales
+                View Our Portfolio
               </Button>
             </div>
             
             <div className="mt-10 flex items-center justify-center lg:justify-start gap-6 text-gray-400 font-outfit text-sm uppercase tracking-widest font-bold">
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                Hiring Designers
+                Accepting New Projects
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                Hiring Developers
+                Consultation Available
               </span>
             </div>
           </MotionSection>
@@ -89,4 +88,4 @@ const JoinTeamCTA = () => {
   )
 }
 
-export default JoinTeamCTA
+export default ProjectCTA

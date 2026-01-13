@@ -6,7 +6,7 @@ import VisionBanner from '../components/about/VisionBanner'
 import CoreValues from '../components/about/CoreValues'
 import Services from '../components/Services'
 import FAQ from '../components/FAQ'
-import JoinTeamCTA from '../components/about/JoinTeamCTA'
+import ProjectCTA from '../components/about/ProjectCTA'
 
 const About = () => {
   useEffect(() => {
@@ -47,7 +47,7 @@ const About = () => {
           <Services />
         </div>
         <FAQ items={aboutFAQs} />
-        {/* <JoinTeamCTA /> */}
+        <ProjectCTA />
       </main>
       <Footer />
     </div>

@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 import FAQ from '../components/FAQ'
 import TeamHero from '../components/team/TeamHero'
 import TeamGrid from '../components/team/TeamGrid'
-import JoinTeamCTA from '../components/about/JoinTeamCTA'
+import ProjectCTA from '../components/about/ProjectCTA'
 
 const Team = () => {
   useEffect(() => {
@@ -12,8 +12,8 @@ const Team = () => {
 
   const teamFAQs = [
     {
-      question: "Is KB Creatives currently hiring?",
-      answer: "We are always looking for exceptional talent! Check our Join Our Team section below or follow us on LinkedIn for open positions."
+      question: "How do you choose your project teams?",
+      answer: "We carefully match our designers and developers based on the specific technical and creative needs of your project, ensuring a perfect fit for your vision."
     },
     {
       question: "Do you offer remote work opportunities?",
@@ -39,7 +39,7 @@ const Team = () => {
         <TeamHero />
         <TeamGrid />
         <FAQ items={teamFAQs} title="Our Culture" subtitle="F.A.Q." />
-        {/* <JoinTeamCTA /> */}
+        <ProjectCTA />
       </main>
       <Footer />
     </div>
