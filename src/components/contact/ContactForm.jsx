@@ -44,7 +44,12 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <div className="text-gray-400 font-outfit text-xs font-bold uppercase tracking-widest mb-1">Email Us</div>
-                      <div className="text-xl font-teko font-bold text-gray-900 tracking-tight">info@kbcreatives.pk</div>
+                      <a 
+                        href="mailto:info@kbcreatives.pk" 
+                        className="text-xl font-teko font-bold text-gray-900 tracking-tight hover:text-brand transition-colors"
+                      >
+                        info@kbcreatives.pk
+                      </a>
                     </div>
                   </div>
 
@@ -54,7 +59,12 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <div className="text-gray-400 font-outfit text-xs font-bold uppercase tracking-widest mb-1">Call Us</div>
-                      <div className="text-xl font-teko font-bold text-gray-900 tracking-tight">(+92) 300 0069835</div>
+                      <a 
+                        href="tel:+923000069835" 
+                        className="text-xl font-teko font-bold text-gray-900 tracking-tight hover:text-brand transition-colors"
+                      >
+                        (+92) 300 0069835
+                      </a>
                     </div>
                   </div>
 
