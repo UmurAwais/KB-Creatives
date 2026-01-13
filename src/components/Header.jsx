@@ -164,7 +164,7 @@ const Header = ({ navigation }) => {
             </svg>
           </button>
 
-          {/* Contact Button - Google Style */}
+          {/* Contact Button */}
           <Button 
             to="/contact" 
             className="hidden sm:flex !h-10 !px-6"
@@ -189,7 +189,7 @@ const Header = ({ navigation }) => {
       </div>
     </header>
 
-    {/* Search Overlay - Google Inspired */}
+    {/* Search Overlay */}
     {searchOpen && (
       <div className={`fixed inset-0 z-[100] search-overlay ${searchClosing ? 'closing' : ''}`}>
         <div className="absolute inset-0 bg-white/95 backdrop-blur-xl" onClick={closeSearch}></div>

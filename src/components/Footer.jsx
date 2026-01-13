@@ -88,7 +88,7 @@ const Footer = () => {
           {/* Brand/Bio */}
           <div className="lg:pr-12">
             <Link to="/" className="inline-block mb-8 group">
-              <img src={logo} alt="KB Creatives" className="h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+              <img src={logo} alt="KB Creatives" className="h-12 w-auto object-contain transition-transform duration-500" />
             </Link>
             <p className="text-white/50 font-outfit text-base leading-relaxed mb-10 font-light">
               Leading the fusion of creativity and technology to build digital experiences that drive growth and inspire innovation.
