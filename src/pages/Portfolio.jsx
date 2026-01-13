@@ -21,9 +21,14 @@ const Portfolio = () => {
     window.scrollTo(0, 0)
     setIsVisible(true)
     
-    // Set filter based on URL
+    // Set filter based on URL query param or path
+    const params = new URLSearchParams(location.search)
+    const filterParam = params.get('filter')
     const path = location.pathname
-    if (path.includes('digital-marketing')) setActiveFilter('digital-marketing')
+
+    if (filterParam) {
+      setActiveFilter(filterParam)
+    } else if (path.includes('digital-marketing')) setActiveFilter('digital-marketing')
     else if (path.includes('brand-identity')) setActiveFilter('brand-identity')
     else if (path.includes('ui-ux-design')) setActiveFilter('ui-ux-design')
     else if (path.includes('web-development')) setActiveFilter('web-development')

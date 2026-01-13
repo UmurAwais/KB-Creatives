@@ -10,19 +10,25 @@ const BannerSlider = () => {
       title: "CREATIVITY ABOVE ALL",
       description: "We are a full-service digital agency that builds fascinating user experiences; our team creates exceptional UI design and functionality.",
       image: "/blog_design_trends_1768044637855.png",
-      bgImage: "/agency_office_1768044580348.png"
+      bgImage: "/agency_office_1768044580348.png",
+      primaryLink: "/contact",
+      secondaryLink: "/portfolio"
     },
     {
       title: "INNOVATION DRIVES US",
       description: "Pushing the boundaries of technology to deliver smart, scalable solutions that transform how businesses interact with the digital world.",
       image: "/portfolio_saas_1768044355258.png",
-      bgImage: "/portfolio_fintech_1768044284286.png"
+      bgImage: "/portfolio_fintech_1768044284286.png",
+      primaryLink: "/contact",
+      secondaryLink: "/portfolio?filter=shopify-development"
     },
     {
       title: "DESIGN THAT SPEAKS",
       description: "Crafting visual identities that resonate. We combine aesthetics with purpose to build brands that leave a lasting impression.",
       image: "/portfolio_graphic_design_1768044491226.png",
-      bgImage: "/portfolio_corporate_rebrand_1768044460369.png"
+      bgImage: "/portfolio_corporate_rebrand_1768044460369.png",
+      primaryLink: "/contact",
+      secondaryLink: "/portfolio?filter=brand-identity"
     }
   ]
 
@@ -105,10 +111,10 @@ const BannerSlider = () => {
               transform: isTransitioning ? 'translateY(20px)' : 'translateY(0)'
             }}
           >
-            <Button variant="primary">
+            <Button to={slides[currentSlide].primaryLink} variant="primary">
               Start Innovating
             </Button>
-            <Button variant="secondary">
+            <Button to={slides[currentSlide].secondaryLink} variant="secondary">
               View Portfolio
             </Button>
           </div>
