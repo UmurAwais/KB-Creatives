@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import Button from './Button'
 import { searchData } from '../data/searchData'
 
 const Header = ({ navigation }) => {
+  const navigate = useNavigate()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
   const [searchOpen, setSearchOpen] = useState(false)
@@ -51,7 +52,7 @@ const Header = ({ navigation }) => {
     e.preventDefault()
     if (searchResults.length > 0) {
       // If there are results, navigate to the first one on Enter
-      window.location.href = searchResults[0].link
+      navigate(searchResults[0].link)
       closeSearch()
     }
   }
