@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import MotionSection from '../about/MotionSection'
 import { Linkedin, Twitter, Github, Instagram, Facebook } from 'lucide-react'
 
-import Umar from "../../assets/Umar Awais.png"
-import Mudassir from "../../assets/Mudassir Saleem.png"
-import Mazhar from "../../assets/Mazhar Hussain.png"
-import Talha from "../../assets/Talha Shahbaz.png"
-import Yasir from "../../assets/Yasir Azad.png"
-import Ehtisham from "../../assets/Ehtisham Ul Zaman.png"
-import Sajid from "../../assets/Sajid Ali.png"
+import Umar from "../../assets/Umar Awais.jpg"
+import Mudassir from "../../assets/Mudassir Saleem.jpg"
+import Mazhar from "../../assets/Mazhar Hussain.jpg"
+import Talha from "../../assets/Talha Shahbaz.jpg"
+import Yasir from "../../assets/Yasir Azad.jpg"
+import Ehtisham from "../../assets/Ehtisham Ul Zaman.jpg"
+import Sajid from "../../assets/Sajid Ali.jpg"
 
 const TEAM_MEMBERS = [
   {
