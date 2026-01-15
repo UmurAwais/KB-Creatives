@@ -9,6 +9,11 @@ import Talha from "../../assets/Talha Shahbaz.jpg"
 import Yasir from "../../assets/Yasir Azad.jpg"
 import Ehtisham from "../../assets/Ehtisham Ul Zaman.jpg"
 import Sajid from "../../assets/Sajid Ali.jpg"
+import Adeela from "../../assets/Adeela Fazal.jpg"
+import Noman from "../../assets/Noman.jpg"
+import Aliza from "../../assets/Aliza Maham.jpg"
+import Habiba from "../../assets/Habiba Sehar.jpg"
+import Javeria from "../../assets/Javeria Parveen.jpg"
 
 const TEAM_MEMBERS = [
   {
@@ -21,7 +26,7 @@ const TEAM_MEMBERS = [
   {
     name: "Hafiza Adila Fazal",
     role: "Managing Director",
-    image: "/team_designer_samuel_1768044164446.png",
+    image: Adeela,
     category: "Leadership",
     social: { linkedin: "#", instagram: "#" }
   },
@@ -70,7 +75,28 @@ const TEAM_MEMBERS = [
   {
     name: "Muhammad Noman",
     role: "Video Editor",
-    image: "/team_engineer_julian_1768044195112.png",
+    image: Noman,
+    category: "Production",
+    social: { linkedin: "#", instagram: "#" }
+  },
+  {
+    name: "Javeria Parveen",
+    role: "Graphic Designer",
+    image: Javeria,
+    category: "Design",
+    social: { linkedin: "#", instagram: "#" }
+  },
+  {
+    name: "Aliza Maham",
+    role: "Video Editor",
+    image: Aliza,
+    category: "Production",
+    social: { linkedin: "#", instagram: "#" }
+  },
+  {
+    name: "Habiba Sehar",
+    role: "Video Editor",
+    image: Habiba,
     category: "Production",
     social: { linkedin: "#", instagram: "#" }
   }
