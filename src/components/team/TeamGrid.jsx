@@ -31,6 +31,20 @@ const TEAM_MEMBERS = [
     social: { linkedin: "#", instagram: "#" }
   },
   {
+    name: "Bareera Talha",
+    role: "SMM Team Lead",
+    image: Adeela,
+    category: "Marketing",
+    social: { linkedin: "#", instagram: "#" }
+  },
+  {
+    name: "Sumaira Siddique",
+    role: "Admin HR",
+    image: Adeela,
+    category: "Marketing",
+    social: { linkedin: "#", instagram: "#" }
+  },
+  {
     name: "Umar Awais",
     role: "Lead Developer",
     image: Umar,
@@ -38,8 +52,15 @@ const TEAM_MEMBERS = [
     social: { linkedin: "https://www.linkedin.com/in/umurawais/", facebook: "https://www.facebook.com/umarawaisofficial", github: "https://github.com/UmurAwais" }
   },
   {
+    name: "Mudassir Saleem",
+    role: "Full-Stack Developer",
+    image: Mudassir,
+    category: "Engineering",
+    social: { linkedin: "https://www.linkedin.com/in/mudassir-saleem-b9a507391/", github: "https://github.com/mudassirsaleem47", facebook: "https://www.facebook.com/chmudassir0.2/" }
+  },
+  {
     name: "Yasir Azad",
-    role: "Head of Marketing",
+    role: "Social Media Marketer",
     image: Yasir,
     category: "Marketing",
     social: { linkedin: "https://www.linkedin.com/in/yasir-azad-78a060348/", facebook: "https://www.facebook.com/yasir.azad.797399" }
@@ -52,11 +73,18 @@ const TEAM_MEMBERS = [
     social: { linkedin: "#", instagram: "#" }
   },
   {
-    name: "Mudassir Saleem",
-    role: "Full-Stack Developer",
-    image: Mudassir,
-    category: "Engineering",
-    social: { linkedin: "https://www.linkedin.com/in/mudassir-saleem-b9a507391/", github: "https://github.com/mudassirsaleem47", facebook: "https://www.facebook.com/chmudassir0.2/" }
+    name: "Javeria Parveen",
+    role: "Graphic Designer",
+    image: Javeria,
+    category: "Design",
+    social: { linkedin: "#", instagram: "#" }
+  },
+  {
+    name: "Habiba Sehar",
+    role: "Graphic Designer",
+    image: Habiba,
+    category: "Production",
+    social: { linkedin: "#", instagram: "#" }
   },
   {
     name: "Mazhar Hussain",
@@ -80,26 +108,12 @@ const TEAM_MEMBERS = [
     social: { linkedin: "#", instagram: "#" }
   },
   {
-    name: "Javeria Parveen",
-    role: "Graphic Designer",
-    image: Javeria,
-    category: "Design",
-    social: { linkedin: "#", instagram: "#" }
-  },
-  {
     name: "Aliza Maham",
     role: "Video Editor",
     image: Aliza,
     category: "Production",
     social: { linkedin: "#", instagram: "#" }
   },
-  {
-    name: "Habiba Sehar",
-    role: "Video Editor",
-    image: Habiba,
-    category: "Production",
-    social: { linkedin: "#", instagram: "#" }
-  }
 ]
 
 const CATEGORIES = ["All", "Leadership", "Design", "Engineering", "Marketing", "Production"]
